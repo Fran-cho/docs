@@ -8,8 +8,4 @@ Our API is available to any of our organizations' users at `{orgname}.ada.suppor
 ###[Authentication](authentication.md)
 ###[Errors](errors.md)
 ##Resources
-###[Messages](messages.md)
-###[Responses](responses.md)
-###[Expressions](expressions.md)
 ###[Inbox](inbox.md)
-###[Users](users.md)
