@@ -1,40 +1,8 @@
 #Inbox
-Inbox is where you'll find all the expressions your users have tried on Ada that couldn't be matched to an existing response.
+Inbox is where you'll find all the expressions your users have tried on Ada that couldn't be matched to an existing response. Authentication is required for all endpoints.
 
-##/inbox/
-
-**Allowed Verbs**
-
-Verb | Description
---- | ---
-**GET** | Retrieves all the items in your organizations inbox. Returns paginated results.
-
-
-**Returned Fields**
-
-Field | Description
---- | ---
-`results` | Integer. The number of results in this page. Maxes out at your `results` argument or 10 if a `results` parameter was not given.
-`inbox` | List. A list of inbox items. Can be empty.
-`page` | Integer. The page you're on. Iterate over pages until results is less than the number of results you requested (or 10 if not specified).
-
-**URL Arguments**
-
-Parameter | Description | Optionality
---- | --- | ---
-`?results` | The number of results you want. Default is 10. | _optional_
-`?page` | Which page of results you want | _optional_
-
-**Example**
-
-```py
-requests.get(
-  url="https://test.ada.support/api/inbox/",
-  auth=("david", "36f028580bb02cc8272a9a020f4200e346e276ae664e45ee80745574e2f5ab80")
-)
-```
-
-**Yields**
+##GET `/inbox/`
+Retrieves all the items in your organizations inbox. Returns paginated results.
 
 ```json
 {  
@@ -51,20 +19,20 @@ requests.get(
 }
 ```
 
-##/inbox/{item._id}
+**URL Arguments**
 
-**Allowed Verbs**
+Parameter | Description | Optionality
+--- | --- | ---
+`?results` | The number of results you want. Default is 10. | _optional_
+`?page` | Which page of results you want | _optional_
 
-Verb | Description
---- | ---
-**DELETE** | Deletes an inbox item based on it's `_id` property.
+**Returned Object**
 
-
-**Returned Fields**
-
-Field | Description
---- | ---
-`message` | String. A message describing how the operation went.
+Key | Type | Description
+--- | --- | ---
+`results` | `int` | The number of results in this page. Maxes out at your `results` argument or 10 if a `results` parameter was not given.
+`inbox` | `list` | A list of inbox item `dict`'s. Could be empty.
+`page` | `int` | The page you're on. Iterate over pages until `results` is less than the number of `?results` you requested (or 10 if not specified).
 
 **Example**
 
@@ -75,7 +43,8 @@ requests.get(
 )
 ```
 
-**Yields**
+##DELETE `/inbox/{_id}`
+Deletes an inbox item forever.
 
 ```json
 {  
@@ -83,19 +52,35 @@ requests.get(
 }
 ```
 
-##/inbox/count
+**Returned Object**
 
-**Allowed Verbs**
+Key | Type | Description
+--- | --- | ---
+`message` | `str` | A message describing how the operation went.
 
-Verb | Description
---- | ---
-**GET** | Retrieves the number of unread inbox items you have.
+**Example**
 
-**Returned Fields**
+```py
+requests.delete(
+  url="https://test.ada.support/api/inbox/574376980973c487310d8118",
+  auth=("david", "36f028580bb02cc8272a9a020f4200e346e276ae664e45ee80745574e2f5ab80")
+)
+```
 
-Field | Type
---- | ---
-`count` | Integer. The number of inbox items available for the organization tied to your user.
+##GET `/inbox/count`
+Get the count of items in your organizations' inbox.
+
+```json
+{  
+   "count":1
+}
+```
+
+**Returned Object**
+
+Key | Type | Description
+--- | --- | ---
+`count` | `int` | The count of items in your inbox.
 
 **Example**
 
@@ -104,14 +89,6 @@ requests.get(
   url="https://test.ada.support/api/inbox/count",
   auth=("david", "36f028580bb02cc8272a9a020f4200e346e276ae664e45ee80745574e2f5ab80")
 )
-```
-
-**Yields**
-
-```json
-{  
-   "count":1
-}
 ```
 
 
