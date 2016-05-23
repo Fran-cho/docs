@@ -1,7 +1,7 @@
 ##Errors
 We use standard HTTP status codes in our responses to notify you of how things went with your requests. If something went wrong, an error will be returned formatted as JSON with a `message` in most cases. It will look something like this:
 
-```
+```json
 {
   "message" : "Missing 'body' parameter"
 }
