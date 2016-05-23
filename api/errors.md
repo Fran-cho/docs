@@ -1,5 +1,5 @@
-## Response Codes
-We use standard HTTP status codes in our responses to notify you of how things went with your requests. An error will be returned with a message in most cases. It will look something like this:
+##Errors
+We use standard HTTP status codes in our responses to notify you of how things went with your requests. If something went wrong, an error will be returned formatted as JSON with a `message` in most cases. It will look something like this:
 
 ```
 {
@@ -7,6 +7,7 @@ We use standard HTTP status codes in our responses to notify you of how things w
 }
 ```
 
+##Codes
 Code | Description
 --- | ---
 **200** | Your `GET` request was successful and the resource was returned to you. Your `POST` request was successful and the modified resource was returned to you. Your `DELETE` operation was successful.
