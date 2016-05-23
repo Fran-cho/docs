@@ -3,12 +3,16 @@ Our API is available to any of our organizations at `{orgname}.ada.support/api/`
 The API is still in beta so you may encounter bugs or things that don't make sense. Please let us know about these by email or in Slack. Thanks!
 
 #Contents
-##[Authentication](authentication.md)
-##[Errors](errors.md)
-##[Messages](messages.md)
-##[Responses](responses.md)
-##[Inbox](inbox.md)
-##[Users](users.md)
+
+##General
+###[Authentication](authentication.md)
+###[Errors](errors.md)
+
+##Resources
+###[Messages](messages.md)
+###[Responses](responses.md)
+###[Inbox](inbox.md)
+###[Users](users.md)
 
 ## Response Codes
 We use standard HTTP status codes in our responses to notify you of how things went with your requests.
