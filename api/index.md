@@ -1,12 +1,14 @@
-Welcome to our API! We're in beta still so please file an issue if something is broken. Thanks!
+Our API is available to any of our organizations at `{orgname}.ada.support/api/` and expects JSON. The Ada API is organized around REST. Our API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. We use built-in HTTP features, like [HTTP authentication](authentication.md) and HTTP verbs, which are understood by off-the-shelf HTTP clients. JSON is returned by all API responses, including errors.
 
-Our API is available to any of our organizations at `{orgname}.ada.support/api/` and expects JSON. To use the API to send messages to Ada from your users and back again, you'll have to configure the HTTP integration with @david on your org's Ada Slack channel. Most endpoints require authorization.
+The API is still in beta so you may encounter bugs or things that don't make sense. Please let us know about these by email or in Slack. Thanks!
 
-## Authorization
-To keep things simple, all authorization happens with a username and password over SSL as a Basic Authentication header. Insecure requests to the API will be ignored. Read the Endpoints section to see which endpoints require authentication
-```
-curl -u yourusername:yourpassword https://yourorganization.ada.support/api/
-```
+#Contents
+##[Authentication](authentication.md)
+##[Errors](errors.md)
+##[Messages](messages.md)
+##[Responses](responses.md)
+##[Inbox](inbox.md)
+##[Users](users.md)
 
 ## Response Codes
 We use standard HTTP status codes in our responses to notify you of how things went with your requests.
