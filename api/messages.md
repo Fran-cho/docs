@@ -25,7 +25,7 @@ Parameter | Description | Optionality
 
 **Example Response**
 ```
-201, "{message : "Message Processing"}"
+200, "{message : "Message Processing"}"
 ```
 
 After this, we will ping your servers back at the URL you specified in your HTTP web hook with our response object. This typically happens within 300ms.
