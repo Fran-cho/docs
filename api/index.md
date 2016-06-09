@@ -9,3 +9,4 @@ Our API is available to any of our organizations' users at `{orgname}.ada.suppor
 ###[Errors](errors.md)
 ##Resources
 ###[Inbox](inbox.md)
+###[Messages](messages.md)
