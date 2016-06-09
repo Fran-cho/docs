@@ -1,6 +1,6 @@
 #Authentication
 
-The API is statless and every request that requires special permissions must be authenticated separarely with HTTP Basic Authentication headers over SSL. You can test out your authentication by visiting `yourorganization.ada.support/api/` with your username and a sha3_256 hash of your password in the authentication header. You should be returned your client (organization) and your user object in the response.
+The API is statless and every request that requires special permissions must be authenticated separarely with HTTP Basic Authentication headers over SSL. You can test out your authentication by visiting `yourorganization.ada.support/api/` with your username and a `sha3_256` hash of your password in the authentication header. You should be returned your client (organization) and your user object in the response.
 
 ```py
 
