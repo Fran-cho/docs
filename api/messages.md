@@ -9,18 +9,18 @@ Creates a new message for ada to respond to based on your message object. The fo
 Parameter | Description | Optionality
 --- | --- | ---
 `by` | A unique name for your user who created the message | **needed**
-`body` | A string of text which represents the value of the message type | **needed**
+`body` | A string of text which conversationally represents your users message | **needed**
 `external_message_id` | An ID that corresponds to the message in your datastore | _optional_
 `external_chat_id` | An ID that corresponds to the conversation in your datastore | _optional_
 `type` | The type of message you're sending. Can be either `text` or `trigger` | _optional_ (Default is `text`)
+`data` | If you're sending a `trigger` message, this is where you would put the `response_id` of the response you want us to send back. _(for more details see below...)_ | **needed** for `type:trigger`, ignored for `type:text`
 
 **Message Types**
 
 Type | Description
 --- | ---
 `text` | A basic text message from a user to your bot. The `body` should be something like `"Hey Ada, how do I change my password?"`
-`trigger` | Sent when a user has pressed a button. The `body` of your message should be a `response_id` corresponding to the response you want us to send back to you.
-
+`trigger` | Sent when a user has pressed a button. The `body` of your message should be the label of your button and the `data` field should be the `response_id` corresponding to the response you want us to send back to you.
 
 **Example Text Message**
 ```json
@@ -36,16 +36,17 @@ Type | Description
 ```json
 {  
   "by" : "davidhariri",
-  "body" : "5754x77x8c8d355ee1d44753",
+  "body" : "Password Instructions",
   "external_message_id" : 1234,
   "external_chat_id" : 5678,
-  "type" : "trigger"
+  "type" : "trigger",
+  "data" : "5754x77x8c8d355ee1d44753"
 }
 ```
 
 **Example Response**
 ```
-200, "{message : "Message Processing"}"
+200, "{"message" : "Message Processing"}"
 ```
 
 After queueing and processing your message we will `POST` your servers back at the URL you specified in your HTTP web hook with a response object. To keep track of inbound messages and who they should route to in your application you should give each of your conversations a unique identifier and make use of the `external_chat_id` field. We aim to always complete these requests in 300ms or less.
@@ -93,7 +94,7 @@ If something was wrong with your request, we'll send you a message about what wa
 
 ```json
 {
-  "message" : "Message Unprocessable. Your message's body : '' was either too short or not of the right type (String)",
+  "message" : "Unprocessable. Your message's body : '' was either too short or not of the right type (String)",
   "unprocessable" : {
     "by" : "davidhariri",
     "body" : null,
