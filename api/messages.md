@@ -48,7 +48,7 @@ Type | Description
 200, "{message : "Message Processing"}"
 ```
 
-After queueing and processing your message we will ping your servers back at the URL you specified in your HTTP web hook with a response object. To keep track of inbound messages and who they should route to in your application you should give each of your conversations a unique identifier and make use of the `external_chat_id` field. We aim to always complete these requests in 300ms or less.
+After queueing and processing your message we will `POST` your servers back at the URL you specified in your HTTP web hook with a response object. To keep track of inbound messages and who they should route to in your application you should give each of your conversations a unique identifier and make use of the `external_chat_id` field. We aim to always complete these requests in 300ms or less.
 
 **Example Response Object**
 ```json
@@ -86,5 +86,19 @@ After queueing and processing your message we will ping your servers back at the
       "response_id" : "5754x77x8c8dy5pee1d44754"
     }
   ]
+}
+```
+
+If something was wrong with your request, we'll send you a message about what was wrong to your HTTP web hook as a `POST` request. It will look something like this:
+
+```json
+{
+  "message" : "Message Unprocessable. Your message's body : '' was either too short or not of the right type (String)",
+  "unprocessable" : {
+    "by" : "davidhariri",
+    "body" : null,
+    "external_message_id" : 1234,
+    "external_chat_id" : 5678
+  }
 }
 ```
