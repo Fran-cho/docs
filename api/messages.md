@@ -1,5 +1,5 @@
 #Messages
-The messages endpoint is where you can create new messages for Ada to respond to.
+The messages endpoint is where you can create new messages for Ada to respond to as an HTTP platform user.
 
 ##POST `/message`
 Creates a new message for ada to respond to based on your message object. The formatting of your object depends on the platform you're using. Below are documentation for bots using our HTTP API integration.
