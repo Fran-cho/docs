@@ -27,8 +27,8 @@ Type | Description
 {  
   "by" : "davidhariri",
   "body" : "Hey Ada, how do I change my password?",
-  "external_message_id" : "1234",
-  "external_chat_id" : "5678",
+  "external_message_id" : 1234,
+  "external_chat_id" : 5678
 }
 ```
 
@@ -37,8 +37,8 @@ Type | Description
 {  
   "by" : "davidhariri",
   "body" : "5754x77x8c8d355ee1d44753",
-  "external_message_id" : "1234",
-  "external_chat_id" : "5678",
+  "external_message_id" : 1234,
+  "external_chat_id" : 5678,
   "type" : "trigger"
 }
 ```
@@ -51,11 +51,11 @@ Type | Description
 After queueing and processing your message we will ping your servers back at the URL you specified in your HTTP web hook with a response object. To keep track of inbound messages and who they should route to in your application you should give each of your conversations a unique identifier and make use of the `external_chat_id` field. We aim to always complete these requests in 300ms or less.
 
 **Example Response Object**
-```
+```json
 {
   "to" : "davidhariri",
-  "external_message_id" : "1234",
-  "external_chat_id" : "5678",
+  "external_message_id" : 1234,
+  "external_chat_id" : 5678,
   "messages" : [
     {
       "type" : "text",
