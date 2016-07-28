@@ -23,6 +23,20 @@ Next, initialize Ada with your bot's handle near the bottom of your page:
 ```
 *Note:* If you aren't sure what your bot's handle is, it's the first part of the url for the application. So if you manage your bot at `https://acme.ada.support/app/` then your handle would be `acme`.
 
+###Callback
+You can have the script fire a callback once it's done initializing the chat session like so:
+
+```html
+  </body>
+  <script type="text/javascript">
+      Ada.init("acme", undefined, function() {
+        // Clear the old conversation from the conversation history
+        Ada.chatWindow.tellFrameTo("reset");
+      });
+  </script>
+</html>
+```
+
 ##Customize
 Initializing with one parameter like the above example will create a button at the bottom right of your website.
 
