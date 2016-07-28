@@ -31,7 +31,7 @@ You can have the script fire a callback once it's done initializing the chat ses
   <script type="text/javascript">
       Ada.init("acme", undefined, function() {
         // Clear the old conversation from the conversation history
-        Ada.chatWindow.tellFrameTo("reset");
+        Ada.tellFrameTo("reset");
       });
   </script>
 </html>
