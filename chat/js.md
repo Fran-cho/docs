@@ -33,8 +33,7 @@ If you like, you can have the script fire a callback once it's done initializing
   </body>
   <script type="text/javascript">
       Ada.init("acme", undefined, function() {
-        // Clear the old conversation from the conversation history
-        Ada.tellFrameTo("reset");
+        // do something here
       });
   </script>
 </html>
@@ -62,8 +61,9 @@ If you'd like to put the chat window in a specific element on your page, you can
 * To change the `<title>` element of the chat window specify a "Name" in the same area as the color.
 
 ##Troubleshooting
-If it doesn't, please check your console for errors. If there are no errors, it may not show up because you haven't turned on Web Chat in your settings. Please go to your manegement app (https://acme.ada.support/app/) and turn on Web Chat in the settings view.
+Please check your console for errors. If there are no errors, it may not show up because you haven't turned on Web Chat in your settings. Please go to your dashboard (https://acme.ada.support/app/) and turn on Web Chat in the settings view.
 
+<!--
 ##API
 The following methods are exposed under the `Ada` namespace on your page:
 
@@ -72,3 +72,4 @@ Method | Description | Acceptable Values
 `Ada.chatWindow.show()` | Shows the chat window | _None_
 `Ada.chatWindow.hide()` | Hides the chat window | _None_
 `Ada.tellFrameTo(String)` | Asks the chat window to do something | `reset`, `blur`, `focus`
+-->
