@@ -63,7 +63,6 @@ If you'd like to put the chat window in a specific element on your page, you can
 ##Troubleshooting
 Please check your console for errors. If there are no errors, it may not show up because you haven't turned on Web Chat in your settings. Please go to your dashboard (https://acme.ada.support/app/) and turn on Web Chat in the settings view.
 
-<!--
 ##API
 The following methods are exposed under the `Ada` namespace on your page:
 
@@ -71,5 +70,4 @@ Method | Description | Acceptable Values
 --- | --- | ---
 `Ada.chatWindow.show()` | Shows the chat window | _None_
 `Ada.chatWindow.hide()` | Hides the chat window | _None_
-`Ada.tellFrameTo(String)` | Asks the chat window to do something | `reset`, `blur`, `focus`
--->
+`Ada.tellFrameTo()` | Asks the chat window to do something or set a key-value pair for later use if a dictionary is specified | `reset`, `blur`, `focus`, {key:"value"}
