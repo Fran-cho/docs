@@ -30,7 +30,10 @@ Understandably, you may not want a Web Chat view taking over your application's 
 <div id="myElement"><!-- Ada Web Chat <iframe> will go here --></div>
 </body>
 <script type="text/javascript">
-    var acmeAdaBot = new AdaChaperone('acme', 'myElement');
+    var acmeAdaBot = new AdaChaperone('acme', {
+    	"parentElement": "myElement",
+    	"customStyles": "*{font-family:Example-Font;}"
+    });
 </script>
 </html>
 ```
@@ -38,13 +41,13 @@ Understandably, you may not want a Web Chat view taking over your application's 
 ## Methods
 At any time in your application you can tell your `AdaChaperone` instance to do a handful of things. The available methods depend on how you instantiated the `AdaChaperone` instance.
 
-### constructor(`clientHandle`, `parentElement`, `callback`)
+### constructor(`clientHandle`, `options`, `callback`)
 As described as above, you can specify three parameters which will dictate how your instance of `AdaChaperone` is created. More information in the table below:
 
 Parameter | Types | Description
 --- | --- | ---
 `clientHandle` | `String` | This should be your bot's handle (your handle is **this**[.ada.suport/app])
-`parentElement` | `String` or `HTMLElement` | Specifies where to build the `<iframe>` if the default side window is not desired.
+`options` | `Object` | Has two optional properties, `parentElement` and `customStyles`. `parentElement` species where to build the `<iframe>` if the default side window is not desired. `customStyles` takes a string value which can be used to override default styles in the Chat iFrame.
 `callback` | `Function` | Specifies a function to be called after the `<iframe>` is finished being set up.
 
 ### show()
