@@ -31,8 +31,8 @@ Understandably, you may not want a Web Chat view taking over your application's 
 </body>
 <script type="text/javascript">
     var acmeAdaBot = new AdaChaperone('acme', {
-    	"parentElement": "myElement",
-    	"customStyles": "*{font-family:Example-Font;}"
+        "parentElement": "myElement",
+        "customStyles": "*{color:yellow !important;}"
     });
 </script>
 </html>
@@ -63,6 +63,7 @@ Use this method to manipulate the chat `<iframe>` inside of the parent element o
 --- | --- | ---
 `focus` | Give window focus to the message input in the `<iframe>`
 `blur` | Take window focus away from the message input in the `<iframe>`
+`reset` | Deletes chat history from local storage
 
 <!-- `reset` | `String` | Reset the chat window's message history -->
 
