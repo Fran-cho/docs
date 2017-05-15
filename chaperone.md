@@ -32,7 +32,8 @@ Understandably, you may not want a Web Chat view taking over your application's 
 <script type="text/javascript">
     var acmeAdaBot = new AdaChaperone('acme', {
         "parentElement": "myElement",
-        "customStyles": "*{color:yellow !important;}"
+        "customStyles": "*{color:yellow !important;}",
+        "private": false
     });
 </script>
 </html>
