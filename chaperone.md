@@ -71,6 +71,9 @@ Use this method to manipulate the chat `<iframe>` inside of the parent element o
 ### setMetaField(`str`, `object`)
 You can use this method to set locally stored meta properties for the chatter. This is useful in combination with your Handoff Form as any meta data fields you set with this method will be carried through in the email attachment from the form submission so you could see, for example, a `user_id` of the person who created the ticket. See your Settings > Integrations view in your bot manager for more information on Handoff forms.
 
+### destroy()
+Tears down your Chaperone instance. You must do this if you wish to create a new Chaperone instance.
+
 _Code Example:_
 
 ```js
