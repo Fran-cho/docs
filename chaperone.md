@@ -48,7 +48,7 @@ As described as above, you can specify three parameters which will dictate how y
 Parameter | Types | Description
 --- | --- | ---
 `clientHandle` | `String` | This should be your bot's handle (your handle is **this**[.ada.suport/app])
-`options` | `Object` | Has three optional properties, `parentElement`, `customStyles`, and `private`. `parentElement` species where to build the `<iframe>` if the default side window is not desired. `customStyles` takes a string value which can be used to override default styles in the Chat iFrame. `private`, if set to `true`, will create a new private instance of the Chat iFrame (history will be empty).
+`options` | `Object` | Options to customize the Ada bot. See [Options](#options) below.
 `callback` | `Function` | Specifies a function to be called after the `<iframe>` is finished being set up.
 
 ### show()
@@ -61,12 +61,12 @@ If you didn't specify a custom element to be the parent element of the `<iframe>
 Use this method to manipulate the chat `<iframe>` inside of the parent element on your page. Use the table below to see what you can tell the frame to do. All `message` values should be of type `String`.
 
 `message` | Description
---- | --- | ---
+--- | --- 
 `focus` | Give window focus to the message input in the `<iframe>`
 `blur` | Take window focus away from the message input in the `<iframe>`
 `reset` | Deletes chat history from local storage
 
-<!-- `reset` | `String` | Reset the chat window's message history -->
+[comment]: <>  (`reset` | `String` | Reset the chat window's message history)
 
 ### setMetaField(`str`, `object`)
 You can use this method to set locally stored meta properties for the chatter. This is useful in combination with your Handoff Form as any meta data fields you set with this method will be carried through in the email attachment from the form submission so you could see, for example, a `user_id` of the person who created the ticket. See your Settings > Integrations view in your bot manager for more information on Handoff forms.
@@ -90,3 +90,15 @@ function acmeSignInFunction(email) {
     });
 }
 ```
+
+## Options
+
+Name  | Default | Description
+--- | --- | ---
+`parentElement` | `null` | Specifies where to build the `<iframe>` if the default side window is not desired.
+`customStyles` | `null` | Takes a string value which can be used to override default styles in the Chat iFrame
+`private` | `false` | If set to `true`, will create a new private instance of the Chat iFrame (history will be empty)
+`mobileOverlay` | `false` | By default, the Ada chat will open in a new window on mobile devices. If you'd prefer to have it open as an overlay on the current window, set this option to `true`
+`greetingHandle` | `null` | Customize the greeting message that the user sees by passing in the handle of the response you'd like to use.
+
+
