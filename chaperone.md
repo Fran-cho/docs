@@ -7,7 +7,7 @@ Feel free to [contact me](mailto:david@ada.support) to ask questions about anyth
 The first step towards adding your Ada chat bot to your web page is to turn on the Web Chat integration in your settings (if you haven't done so already). The second step is to add the scripts to your page inside of your `<head>...</head>` block:
 
 ```html
-<script src="https://static.ada.support/embed.4c62d05d.min.js" charset="utf-8"></script>
+<script src="https://static.ada.support/embed.29518ede.min.js" charset="utf-8"></script>
 ```
 
 The last step is to instantiate the Ada Chaperone client application with the script below. It is important that you add the script to the bottom of your document (after the `</body>` tag).
