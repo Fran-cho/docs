@@ -61,7 +61,7 @@ If you didn't specify a custom element to be the parent element of the `<iframe>
 Use this method to manipulate the chat `<iframe>` inside of the parent element on your page. Use the table below to see what you can tell the frame to do. All `message` values should be of type `String`.
 
 `message` | Description
---- | --- 
+--- | ---
 `focus` | Give window focus to the message input in the `<iframe>`
 `blur` | Take window focus away from the message input in the `<iframe>`
 `reset` | Deletes chat history from local storage
@@ -100,5 +100,3 @@ Name  | Default | Description
 `private` | `false` | If set to `true`, will create a new private instance of the Chat iFrame (history will be empty)
 `mobileOverlay` | `false` | By default, the Ada chat will open in a new window on mobile devices. If you'd prefer to have it open as an overlay on the current window, set this option to `true`
 `greetingHandle` | `null` | Customize the greeting message that the user sees by passing in the handle of the response you'd like to use.
-
-
