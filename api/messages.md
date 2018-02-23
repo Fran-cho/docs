@@ -1,7 +1,7 @@
-#Messages
+# Messages
 The messages endpoint is where you can create new messages for Ada to respond to as an HTTP platform user.
 
-##POST `/message`
+## POST `/message`
 Creates a new message for ada to respond to based on your message object. The formatting of your object depends on the platform you're using. Below are documentation for bots using our HTTP API integration.
 
 **Expected Keys**
@@ -24,7 +24,7 @@ Type | Description
 
 **Example Text Message**
 ```json
-{  
+{
   "by" : "davidhariri",
   "body" : "Hey Ada, how do I change my password?",
   "external_message_id" : 1234,
@@ -34,7 +34,7 @@ Type | Description
 
 **Example Trigger Message**
 ```json
-{  
+{
   "by" : "davidhariri",
   "body" : "Password Instructions",
   "external_message_id" : 1234,
