@@ -1,8 +1,13 @@
 # Messages
 The messages endpoint is where you can create new messages for Ada to respond to as an HTTP platform user.
 
-## POST `/message`
+## POST `/message/http/`
 Creates a new message for ada to respond to based on your message object. The formatting of your object depends on the platform you're using. Below are documentation for bots using our HTTP API integration.
+
+**Authentication**
+To authenticate with Ada's HTTP API, you must have a `key` generated. This can be done by contacting your Ada Customer Service Manager. To make API calls you must include the key as a query string in the URL:
+
+`https://<bothandle>.ada.support/message/http/?key=<generated_key>`
 
 **Expected Keys**
 
