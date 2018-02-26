@@ -1,3 +1,5 @@
+# DEPRECATED
+
 #Responses
 
 ##POST `/responses/`
@@ -14,7 +16,7 @@ Parameter | Description | Optionality
 
 **Example**
 ```json
-{  
+{
   "handle" : "My test response",
   "button_label" : "Test Me",
   "messages" : [
@@ -29,7 +31,7 @@ Parameter | Description | Optionality
 **Example Response**
 `201:Created`
 ```
-{  
+{
   "_id" : "573f068174efb80a55dbdeb8",
   "handle" : "My test response",
   "closer" : false,

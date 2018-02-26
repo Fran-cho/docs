@@ -1,3 +1,5 @@
+# DEPRECATED
+
 #Inbox
 Inbox is where you'll find all the expressions your users have tried on Ada that couldn't be matched to an existing response. Authentication is required for all endpoints.
 
@@ -5,10 +7,10 @@ Inbox is where you'll find all the expressions your users have tried on Ada that
 Retrieves all the items in your organizations inbox. Returns paginated results.
 
 ```json
-{  
+{
    "results":1,
-   "inbox":[  
-      {  
+   "inbox":[
+      {
          "_id":"574376980973c487310d8118",
          "body":"How do I change my password?",
          "client_handle":"test",
@@ -47,7 +49,7 @@ requests.get(
 Deletes an inbox item forever.
 
 ```json
-{  
+{
    "message":"Deleted 574376980973c487310d8118"
 }
 ```
@@ -71,7 +73,7 @@ requests.delete(
 Get the count of items in your organizations' inbox.
 
 ```json
-{  
+{
    "count":1
 }
 ```
@@ -90,5 +92,3 @@ requests.get(
   auth=("david", "36f028580bb02cc8272a9a020f4200e346e276ae664e45ee80745574e2f5ab80")
 )
 ```
-
-

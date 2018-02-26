@@ -6,9 +6,6 @@ Our API is available to any of our organizations' users at `{orgname}.ada.suppor
 
 ## Contents
 ### General
-#### [Authentication](authentication.md)
 #### [Errors](errors.md)
 ### Resources
-#### [Inbox](inbox.md)
 #### [Messages](messages.md)
-#### [Responses](responses.md)
