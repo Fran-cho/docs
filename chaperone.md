@@ -82,7 +82,7 @@ If you didn't specify a custom element to be the parent element of the `<iframe>
 Tears down your Chaperone instance. You must do this if you wish to create a new Chaperone instance.
 
 #### setMetaField(`str`, `object`)
-You can use this method to set locally stored meta properties for the chatter. This is useful in combination with your Handoff Form as any meta data fields you set with this method will be carried through in the email attachment from the form submission so you could see, for example, a `user_id` of the person who created the ticket. See your Settings > Integrations view in your bot manager for more information on Handoff forms.
+You can use this method to set meta properties for the Chatter. This is useful for gathering ticket information (ex. client email). It can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the Conversations view.
 
 #### tellFrameTo(`message`)
 Use this method to manipulate the chat `<iframe>` inside of the parent element on your page. Use the table below to see what you can tell the frame to do. All `message` values should be of type `String`.
