@@ -1,8 +1,4 @@
 # Chaperone
-
-[![License][license-image]][license-url]
-[![Downloads][downloads-image]][downloads-url]
-
 > Chaperone is a small JavaScript application that embeds your **Ada** chat bot into your web page.
 
 ## Getting Started
