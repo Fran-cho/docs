@@ -6,6 +6,8 @@
 > Chaperone is a small JavaScript application that embeds your **Ada** chat bot into your web page.
 
 ## Getting Started
+Getting started with Ada is easy, just follow the steps below. You can see a working example [here](https://jsfiddle.net/c8m8u2y4/63/).
+
 #### Turn on your bot
 The first step towards adding your Ada chat bot to your web page is to turn on the Web Chat integration in your Settings > Platforms page. 
 
@@ -93,3 +95,5 @@ Use this method to manipulate the chat `<iframe>` inside of the parent element o
 `blur` | Take window focus away from the message input in the `<iframe>`
 
 
+## More
+Need some help? Get in touch with us at [help@ada.support](mailto:help@ada.support).
