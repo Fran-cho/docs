@@ -29,7 +29,7 @@ The last step is to instantiate Chaperone with the script below. You should add 
 
 That's it! If you've turned on Web Chat in your settings, you should see a small question-mark button on the bottom right corner of your page which will toggle the Web Chat into and out of view.
 
-## Advanced Set Up
+## Advanced Setup
 Chaperone supports numerous options and methods to help you customize the look and behaviour of your bot. 
 
 ### constructor(`clientHandle`, `options`, `callback`)
