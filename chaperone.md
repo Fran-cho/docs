@@ -91,6 +91,8 @@ Use this method to manipulate the chat `<iframe>` inside of the parent element o
 --- | ---
 `focus` | Give window focus to the message input in the `<iframe>`
 `blur` | Take window focus away from the message input in the `<iframe>`
+`reset` | Resets Chat UI with a new Chatter and history
+`deleteHistory` | Clears storage so that a new Chatter will be created upon page refresh
 
 
 ## More
