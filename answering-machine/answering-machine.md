@@ -46,6 +46,8 @@ You "train" your machine learning model by teaching it questions that it should 
 
 This endpoint simply kicks off a training event for a client. This will pick up all the new questions that have been added to the Client and build them into the machine learning model.
 
+---
+
 #### `GET` : `/prediction/`
 
 | Field | Type |Required |
@@ -55,6 +57,8 @@ This endpoint simply kicks off a training event for a client. This will pick up 
 |`num_predictions`| Number | No|
 
 This endpoint takes a `question_to_predict` and a `num_predictions` and returns a list of (one or more) Labels.
+
+---
 
 #### `POST` : `/question/`
 
@@ -67,6 +71,8 @@ This endpoint takes a `question_to_predict` and a `num_predictions` and returns 
 
 This endpoint allows you to create new Questions for a Client. The `question` field is a string representation of the question. The `label` field is an identifier to an object in your application's domain that should be "predicted" from this question. The `active` field simply turns on/off the question in the model.
 
+---
+
 #### `PATCH` : `/question/`
 
 | Field | Type |Required |
@@ -78,14 +84,18 @@ This endpoint allows you to create new Questions for a Client. The `question` fi
 
 This endpoint allows you to edit Questions for a Client.
 
+---
+
 #### `DELETE` : `/question/`
 
 | Field | Type |Required |
 |-------|------|----------|
 |`client_id` | String | Yes |
 |`question`|String|Yes|
+
 This endpoint allows you to delete a Question.
 
+---
 
 #### `POST` : `/questions/`
 | Field | Type |Required |
@@ -96,6 +106,8 @@ This endpoint allows you to delete a Question.
 
 This endpoint lets you train several questions at once to a Client.
 
+---
+
 #### `DELETE` : `/questions/`
 | Field | Type |Required |
 |-------|------|----------|
@@ -105,6 +117,7 @@ This endpoint lets you train several questions at once to a Client.
 
 This endpoint lets you train several questions at once to a Client.
 
+---
 
 #### `DELETE` : `/labels/`
 | Field | Type |Required |
@@ -113,3 +126,5 @@ This endpoint lets you train several questions at once to a Client.
 |`label`|String|Yes|
 
 This endpoint allows you to delete all questions associated with a Label. Use this endpoint when you're application is deleting the object associated with this AM label.
+
+---
