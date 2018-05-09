@@ -4,12 +4,6 @@ Answering Machine (AM) is Ada's NLP service, used for training and querying text
 
 ## Concepts
 
-- Clients
-- Questions
-- Labels
-- Predictions
-- Training
-
 ### Clients
 
 AM services many clients, so we need a way to keep track of "who's who" on the platform. Before you get started, you'll need a `client_id`, which Ada generates on your behalf.
