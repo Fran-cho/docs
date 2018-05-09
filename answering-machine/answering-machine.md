@@ -40,10 +40,9 @@ You "train" your machine learning model by teaching it questions that it should 
 
 #### `/train/`
 
-Field | Required
-------------------
-`client_id` | Yes
--------------------
+| Field | Required |
+|-------|----------|
+|`client_id` | Yes |
 
 This endpoint simply kicks off a training event for a client. This will pick up all the new questions that have been added to the Client and build them into the machine learning model.
 
