@@ -48,14 +48,35 @@ This endpoint simply kicks off a training event for a client. This will pick up 
 
 #### `/prediction/`
 
+| Field | Required |
+|-------|----------|
+|`client_id` | Yes |
+
 
 
 #### `/question/`
 
+| Field | Required |
+|-------|----------|
+|`client_id` | Yes |
+
+
 #### `/questions/`
+
+| Field | Required |
+|-------|----------|
+|`client_id` | Yes |
+
 
 #### `/labels/`
 
+| Field | Required |
+|-------|----------|
+|`client_id` | Yes |
+
+
 #### `/parameters/`
 
-### Testing
+| Field | Required |
+|-------|----------|
+|`client_id` | Yes |
