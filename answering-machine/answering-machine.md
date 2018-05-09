@@ -36,6 +36,10 @@ You "train" your machine learning model by teaching it questions that it should 
 
 ### Authentication
 
+Authentication is achieved through a pre-shared key that's specific to each client we onboard. Ada will generate and send you your authentication key. Don't share it with anybody else!
+
+Each of the endpoints described below requre an `Authorization` HTTP header that's set to the key that Ada provides for your client.
+
 ### Endpoints
 
 #### `POST` : `/train/`
