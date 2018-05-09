@@ -38,45 +38,78 @@ You "train" your machine learning model by teaching it questions that it should 
 
 ### Endpoints
 
-#### `/train/`
+#### `POST` : `/train/`
 
-| Field | Required |
-|-------|----------|
-|`client_id` | Yes |
+| Field | Type | Required |
+|-------|------|----------|
+|`client_id` | String | Yes |
 
 This endpoint simply kicks off a training event for a client. This will pick up all the new questions that have been added to the Client and build them into the machine learning model.
 
-#### `/prediction/`
+#### `GET` : `/prediction/`
 
-| Field | Required |
-|-------|----------|
-|`client_id` | Yes |
+| Field | Type |Required |
+|-------|------|----------|
+|`client_id` | String | Yes |
+|`question_to_predict` | String | Yes |
+|`num_predictions`| Number | No|
+
+This endpoint takes a `question_to_predict` and a `num_predictions` and returns a list of (one or more) Labels.
+
+#### `POST` : `/question/`
+
+| Field | Type |Required |
+|-------|------|----------|
+|`client_id` | String | Yes |
+|`question`|String|Yes|
+|`label`|String|Yes|
+|`active`|Boolean|Yes|
+
+This endpoint allows you to create new Questions for a Client. The `question` field is a string representation of the question. The `label` field is an identifier to an object in your application's domain that should be "predicted" from this question. The `active` field simply turns on/off the question in the model.
+
+#### `PATCH` : `/question/`
+
+| Field | Type |Required |
+|-------|------|----------|
+|`client_id` | String | Yes |
+|`question`|String|Yes|
+|`label`|String|Yes|
+|`active`|Boolean|Yes|
+
+This endpoint allows you to edit Questions for a Client.
+
+#### `DELETE` : `/question/`
+
+| Field | Type |Required |
+|-------|------|----------|
+|`client_id` | String | Yes |
+|`question`|String|Yes|
+This endpoint allows you to delete a Question.
 
 
+#### `POST` : `/questions/`
+| Field | Type |Required |
+|-------|------|----------|
+|`client_id` | String | Yes |
+|`questions` | Array | Yes |
+|`label` | String | Yes |
 
-#### `/question/`
+This endpoint lets you train several questions at once to a Client.
 
-| Field | Required |
-|-------|----------|
-|`client_id` | Yes |
+#### `DELETE` : `/questions/`
+| Field | Type |Required |
+|-------|------|----------|
+|`client_id` | String | Yes |
+|`questions` | Array | Yes |
+|`label` | String | Yes |
 
-
-#### `/questions/`
-
-| Field | Required |
-|-------|----------|
-|`client_id` | Yes |
-
-
-#### `/labels/`
-
-| Field | Required |
-|-------|----------|
-|`client_id` | Yes |
+This endpoint lets you train several questions at once to a Client.
 
 
-#### `/parameters/`
+#### `DELETE` : `/labels/`
+| Field | Type |Required |
+|-------|------|----------|
+|`client_id` | String | Yes |
+|`label`|String|Yes|
 
-| Field | Required |
-|-------|----------|
-|`client_id` | Yes |
+This endpoint allows you to delete all questions associated with a Label. Use this endpoint when you're application is deleting the object associated with this AM label.
