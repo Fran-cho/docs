@@ -13,3 +13,7 @@ Check this out if you're interested in embedding Ada Support's chat interface in
 ## [Chat UI](/chat/chat.md)
 
 Read this if you're interested in learning more about Ada's web chat UI and what it can do.
+
+## [Answering Machine](/answering-machine/answering-machine.md)
+
+See this document to understand Ada's machine learning API service
