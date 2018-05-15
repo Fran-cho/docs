@@ -13,7 +13,12 @@ The first step towards adding your Ada chat bot to your web page is to turn on t
 The next step is to add the Chaperone embed script to your page inside of your `<head>...</head>` block:
 
 ```html
-<script src="https://static.ada.support/embed.6e24d7ca.min.js" charset="utf-8"></script>
+<script 
+    src="https://static.ada.support/embed.6e24d7ca.min.js" 
+    integrity="sha384-J8L5UXCAqjEADNb9J+bFexr76KGswraAv9qACbkTYH2INTA2KogkYr7oHvtDDDwh"
+    crossorigin="anonymous"
+    charset="utf-8"
+></script>
 ```
 
 #### Instantiate Chaperone
