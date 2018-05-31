@@ -72,7 +72,7 @@ Name  | Type | Default | Description
 `greetingHandle` | `Boolean` | `null` | Customize the greeting message that the user sees by passing in the handle of the response you'd like to use
 `chatterTokenCallback` | `Function` | `null` | Specifies a callback function to be called when the Chatter has been set. The Chatter token is passed to the callback as an argument
 `cluster` | `String` | `null` | Specifies the cluster to be used
-`language` | `String` | `null` | Specifies the language to be used in the bot
+`language` | `String` | `null` | Specifies the language to be used in the bot (`"en"` or `"fr"`)
 
 
 ### Methods
