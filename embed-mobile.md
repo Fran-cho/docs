@@ -31,7 +31,7 @@ Lastly, you'll want to enable JavaScript in the webview:
 webview.getSettings().setJavaScriptEnabled(true);
 ```
 
-> Note, you must include the `INTERNET` permissions in your application's Android Manivest File
+*Note, you must include the `INTERNET` permissions in your application's Android Manifest File:*
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
