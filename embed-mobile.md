@@ -10,7 +10,7 @@ The chat UI is simply a single-page standalone web application that's designed t
 
 ## Android
 
-Embedding Ada into an Android application is as simple as starting an Activity that presents a [WebView](https://developer.android.com/reference/android/webkit/WebView) view.
+Embedding Ada into an Android application is as simple as starting an Activity that presents a `[WebView](https://developer.android.com/reference/android/webkit/WebView)` view.
 
 To provide a WebView in your own Activity, include a `<WebView>` in your layout, or set the entire Activity window as a WebView during `onCreate()`:
 
@@ -38,3 +38,5 @@ webview.getSettings().setJavaScriptEnabled(true);
 ```
 
 ## iOS
+
+Embedding Ada into an iOS application is as simple as instantiating a `[WKWebView](https://developer.apple.com/documentation/webkit/wkwebview)` object, setting it as the view, and loading your bot's chat UI URL.
