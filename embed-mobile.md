@@ -40,3 +40,27 @@ webview.getSettings().setJavaScriptEnabled(true);
 ## iOS
 
 Embedding Ada into an iOS application is as simple as instantiating a [`WKWebView`](https://developer.apple.com/documentation/webkit/wkwebview) object, setting it as the view, and loading your bot's chat UI URL.
+
+Here's an example of how to create the `WKWebView` programmatically:
+
+```objc
+import UIKit
+import WebKit
+class ViewController: UIViewController, WKUIDelegate {
+
+    var webView: WKWebView!
+
+    override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
+        view = webView
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let myURL = URL(string:ps://<bot-handle>.ada.support/chat/")
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
+    }}
+```
