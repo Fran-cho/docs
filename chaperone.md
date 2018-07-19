@@ -13,7 +13,12 @@ The first step towards adding your Ada chat bot to your web page is to turn on t
 The next step is to add the Chaperone embed script to your page inside of your `<head>...</head>` block:
 
 ```html
-<script src="https://static.ada.support/embed.6e24d7ca.min.js" charset="utf-8"></script>
+<script 
+    src="https://static.ada.support/embed.beee880c.min.js" 
+    integrity="sha384-/eMsnO3I51Ij8o78QlBHERR6FLraiOXDenZLtnEwVgru2T/9F/zDXQjXbICdYqXm"
+    crossorigin="anonymous"
+    charset="utf-8"
+></script>
 ```
 
 #### Instantiate Chaperone
@@ -67,6 +72,7 @@ Name  | Type | Default | Description
 `greetingHandle` | `Boolean` | `null` | Customize the greeting message that the user sees by passing in the handle of the response you'd like to use
 `chatterTokenCallback` | `Function` | `null` | Specifies a callback function to be called when the Chatter has been set. The Chatter token is passed to the callback as an argument
 `cluster` | `String` | `null` | Specifies the cluster to be used
+`language` | `String` | `null` | Specifies the language to be used in the bot (`"en"` or `"fr"`)
 
 
 ### Methods
