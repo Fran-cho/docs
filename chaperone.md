@@ -69,7 +69,7 @@ Name  | Type | Default | Description
 `customStyles` | `String` | `null` | Takes a string value which can be used to override default styles in the Chat iFrame
 `private` | `Boolean` | `false` | If set to `true`, will create a new private instance of the Chat iFrame
 `mobileOverlay` | `Boolean` | `false` | By default, the Ada chat will open in a new window on mobile devices. If you'd prefer to have it open as an overlay on the current window, set this option to `true`
-`greetingHandle` | `Boolean` | `null` | Customize the greeting message that the user sees by passing in the handle of the response you'd like to use
+`greetingHandle` | `String` | `null` | Customize the greeting message that the user sees by passing in the handle of the response you'd like to use
 `chatterTokenCallback` | `Function` | `null` | Specifies a callback function to be called when the Chatter has been set. The Chatter token is passed to the callback as an argument
 `cluster` | `String` | `null` | Specifies the cluster to be used
 `language` | `String` | `null` | Specifies the language to be used in the bot (`"en"` or `"fr"`)
