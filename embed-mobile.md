@@ -59,7 +59,7 @@ class ViewController: UIViewController, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let myURL = URL(string:ps://<bot-handle>.ada.support/chat/")
+        let myURL = URL(string:"https://<bot-handle>.ada.support/chat/")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }}
