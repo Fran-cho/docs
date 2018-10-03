@@ -14,7 +14,7 @@ The next step is to add the Chaperone embed script to your page inside of your `
 
 ```html
 <script 
-    src="https://static.ada.support/embed.beee880c.min.js" 
+    src="https://static.ada.support/embed.bdcc65d5.min.js" 
     integrity="sha384-/eMsnO3I51Ij8o78QlBHERR6FLraiOXDenZLtnEwVgru2T/9F/zDXQjXbICdYqXm"
     crossorigin="anonymous"
     charset="utf-8"
@@ -27,7 +27,7 @@ The last step is to instantiate Chaperone with the script below. You should add 
 ```html
 </body>
 <script type="text/javascript">
-    const adaBot = new AdaChaperone('client-handle'); // Replace with you bot handle
+    const adaBot = new AdaChaperone('client-handle'); // Replace with your bot handle
 </script>
 </html>
 ```
