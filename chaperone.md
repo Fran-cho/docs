@@ -16,8 +16,8 @@ The next step is to add the Chaperone embed script to your page inside of your `
 
 ```html
 <script 
-    src="https://static.ada.support/embed.bdcc65d5.min.js" 
-    integrity="sha384-xc4Zb1cJTdi32QwzlZ+MFOnyC5yM1kJSh0LCYFLiX27aOd4mW4mKFOlQw2ySnfHi"
+    src="https://static.ada.support/embed.5730bc15.min.js" 
+    integrity="sha384-84GgM3gWiiUssHoqR1l+U+wtwk9iqVoFGPNkaAuxBYUsURoCPWO2UU5G3emRXBC0"
     crossorigin="anonymous"
     charset="utf-8"
 ></script>
