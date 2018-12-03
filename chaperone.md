@@ -9,15 +9,15 @@
 Getting started with Ada is easy, just follow the steps below. You can see a working example [here](https://jsfiddle.net/c8m8u2y4/70/).
 
 #### Turn on your bot
-The first step towards adding your Ada chat bot to your web page is to turn on the Web Chat integration in your Settings > Platforms page. 
+The first step towards adding your Ada chat bot to your web page is to turn on the Web Chat integration in your Settings > Platforms page.
 
 #### Embed Chaperone script
 The next step is to add the Chaperone embed script to your page inside of your `<head>...</head>` block:
 
 ```html
-<script 
-    src="https://static.ada.support/embed.c013830e.min.js" 
-    integrity="sha384-v7ay/lZi5M9krLuUfLWdXqVUx/E3lyVaVEEZZShwQeVx/1PcpjAZMhnjy8k9o/1Q"
+<script
+    src="https://static.ada.support/embed.f8b282eb.min.js"
+    integrity="sha384-A0EOe/GwB+wqNjGniuVFup2J8YuMTrTibM487C3K8qHcQkY4J5Ib2PcV9MIXbnxl"
     crossorigin="anonymous"
     charset="utf-8"
 ></script>
@@ -37,10 +37,10 @@ The last step is to instantiate Chaperone with the script below. You should add 
 That's it! If you've turned on Web Chat in your settings, you should see a small question-mark button on the bottom right corner of your page which will toggle the Web Chat into and out of view.
 
 ## Advanced Setup
-Chaperone supports numerous options and methods to help you customize the look and behaviour of your bot. 
+Chaperone supports numerous options and methods to help you customize the look and behaviour of your bot.
 
 ### constructor(`clientHandle`, `options`, `callback`)
-You can specify three parameters which will dictate how your instance of `AdaChaperone` is created. 
+You can specify three parameters which will dictate how your instance of `AdaChaperone` is created.
 
 Parameter | Types | Description
 --- | --- | ---
