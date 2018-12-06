@@ -23,7 +23,7 @@ Getting started with Ada is easy, just follow the steps below.
 [**You can see a working example here.**](https://jsfiddle.net/c8m8u2y4/175/)
 
 ### 1. Turn on your bot
-The first step towards adding your Ada chat bot to your web page is to turn on the Web Chat integration in your Settings > Platforms page.
+The first step towards adding your Ada Chat Bot to your web page is to turn on the Web Chat integration in your Settings > Platforms page.
 
 ### 2. Embed Chaperone script
 The next step is to add the Chaperone embed script to your page inside of your `<head>...</head>` block:
@@ -99,7 +99,7 @@ Specifies the Kubernetes cluster to be used. Unless directed an Ada team member 
 
 
 #### `customStyles @type {String}`
-The `customStyles` option can be used to override default styles inside the Chat iFrame. The value of the string should be the CSS rule-set you wish to apply inside the iFrame. A list of CSS selectors available for targetting can be found in the table below. 
+The `customStyles` option can be used to override default styles inside the Web Chat iFrame. The value of the string should be the CSS rule-set you wish to apply inside the iFrame. A list of CSS selectors available for targetting can be found in the table below. 
 
 <aside class="warning">
 We do not recommend assigning styles to classes you inspect in the DOM. Class naming is subject to change, and can cause your custom styles to break.
@@ -108,7 +108,7 @@ We do not recommend assigning styles to classes you inspect in the DOM. Class na
 Selector | Description
 --- | ---
 `#message-container` | The outer wrapper, containing the top bar, message list, and input bar
-`#ada-close-button` | The button used to close the Chat window
+`#ada-close-button` | The button used to close the Web Chat window
 `#input-bar` | The bottom wrapper, containg the textarea element, send button, and bottom text
 `#message-input` | The textarea inside the input bar, used for use input
 `#clear-message` | The button used to clear text from the message-input
@@ -159,7 +159,7 @@ Example:
 ```
 
 #### `mobileOverlay @type {Boolean}`
-By default, the Ada Chat will open in a new window on mobile devices. If you'd prefer to have it open as an overlay overtop the current window, set this option to `true`.
+By default, the Web Chat will open in a new window on mobile devices. If you'd prefer to have it open as an overlay overtop the current window, set this option to `true`.
 
 #### `parentElement @type {String|Object}`
 Specifies where to mount the `<iframe>` if the default side drawer is not desired. Accepts the `HTMLNode` or `id` of the desired parent element.
@@ -179,26 +179,42 @@ Example:
 ```
 
 #### `private @type {Boolean}`
-If set to `true`, this will put Chat into "Private" mode. This will cause Chat to forget conversation history on refresh. This is effectively the same as setting your Chat platform persitence to "Forget After Reload" in the **Settings > Platforms** page of your dashboard.
+If set to `true`, this will put Web Chat into "Private" mode. This will cause Web Chat to forget conversation history on refresh. This is effectively the same as setting your Web Chat platform persitence to "Forget After Reload" in the **Settings > Platforms** page of your dashboard.
 
 
 ### Methods
-At any time in your application you can tell your `AdaChaperone` instance to do a handful of things. The available methods depend on how you instantiated the `AdaChaperone` instance.
+At any time you can tell your `AdaChaperone` instance to do a handful of things. The available methods depend on how you instantiated the `AdaChaperone` instance.
 
-#### destroy()
+#### `destroy()`
 Tears down your Chaperone instance. You must do this if you wish to create a new Chaperone instance.
 
-#### hide()
-If you didn't specify a custom element to be the parent element of the `<iframe>`, then this method will hide the Web Chat view.
+#### `hide()`
+Can be used to programatically close the Web Chat view.
 
-#### setMetaField(`str`, `object`)
-You can use this method to set meta properties for the Chatter. This is useful for gathering ticket information (ex. client email). It can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the Conversations view.
+This method cannot be used with the `parentElement` option.
 
-#### show()
-If you didn't specify a custom element to be the parent element of the `<iframe>`, then this method will show the Web Chat view.
 
-#### tellFrameTo(`message`)
-Use this method to manipulate the chat `<iframe>` inside of the parent element on your page. Use the table below to see what you can tell the frame to do. All `message` values should be of type `String`.
+#### `setMetaField(fieldName, value) @param {String} @param {String}`
+You can use this method to set meta properties for the Chatter. This can be useful for setting information about your end users. For example, you may wish to track the `email` and `name` for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the Conversations view of your Ada dashboard.
+
+Example:
+```javascript
+adaBot.setMetaField('email', 'joe-schmoe123@gmail.com');
+adaBot.setMetaField('name', 'Joe Schmoe');
+```
+
+#### `show()`
+Can be used to programatically open the Web Chat view. This is useful if you would like to open the Web Chat automatically when the page loads, or when clicking a custom butoon.
+
+This method cannot be used with the `parentElement` option.
+
+Example:
+```html
+<button onclick="adaBot.show()">Open Chat</button>
+```
+
+#### `tellFrameTo(message) @param {String}`
+Use this method to manipulate the Web Chat `<iframe>`. Use the table below to see what you can tell the frame to do.
 
 `message` | Description
 --- | ---
