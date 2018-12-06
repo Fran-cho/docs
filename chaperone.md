@@ -95,10 +95,8 @@ Example:
 ```
 
 #### `cluster @type {String}`
+Specifies the Kubernetes cluster to be used. Unless directed an Ada team member you will not need to change this value.
 
-Example:
-```html
-```
 
 #### `customStyles @type {String}`
 The `customStyles` option can be used to override default styles inside the Chat iFrame. The value of the string should be the CSS rule-set you wish to apply inside the iFrame. A list of CSS selectors available for targetting can be found in the table below. 
@@ -137,8 +135,15 @@ Example:
 ```
 
 #### `greetingHandle @type {String}`
+This can be used to customize the greeting messages that new users see. This is useful for setting page-specific greetings across your app. The `greetingHandle` should correspond to the title of the Answer you would like to use in your Ada dashboard.
+
 Example:
 ```html
+<script type="text/javascript">
+  const adaBot = new AdaChaperone('client-handle', {
+    "greetingHandle": "My Answer"
+  });
+</script>
 ```
 
 #### `language @type {String}`
@@ -154,35 +159,43 @@ Example:
 ```
 
 #### `mobileOverlay @type {Boolean}`
-Example:
-```html
-```
+By default, the Ada Chat will open in a new window on mobile devices. If you'd prefer to have it open as an overlay overtop the current window, set this option to `true`.
 
 #### `parentElement @type {String|Object}`
+Specifies where to mount the `<iframe>` if the default side drawer is not desired. Accepts the `HTMLNode` or `id` of the desired parent element.
+
 Example:
 ```html
+<body>
+  ...
+  <div id="custom-iframe"></div>
+  ...
+</body>
+<script type="text/javascript">
+  const adaBot = new AdaChaperone('client-handle', {
+    "parentElement": document.getElementById("custom-iframe")
+  });
+</script>
 ```
 
-#### `parentElement @type {Boolean}`
-Example:
-```html
-```
+#### `private @type {Boolean}`
+If set to `true`, this will put Chat into "Private" mode. This will cause Chat to forget conversation history on refresh. This is effectively the same as setting your Chat platform persitence to "Forget After Reload" in the **Settings > Platforms** page of your dashboard.
 
 
 ### Methods
 At any time in your application you can tell your `AdaChaperone` instance to do a handful of things. The available methods depend on how you instantiated the `AdaChaperone` instance.
 
-#### show()
-If you didn't specify a custom element to be the parent element of the `<iframe>`, then this method will show the Web Chat view.
+#### destroy()
+Tears down your Chaperone instance. You must do this if you wish to create a new Chaperone instance.
 
 #### hide()
 If you didn't specify a custom element to be the parent element of the `<iframe>`, then this method will hide the Web Chat view.
 
-#### destroy()
-Tears down your Chaperone instance. You must do this if you wish to create a new Chaperone instance.
-
 #### setMetaField(`str`, `object`)
 You can use this method to set meta properties for the Chatter. This is useful for gathering ticket information (ex. client email). It can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the Conversations view.
+
+#### show()
+If you didn't specify a custom element to be the parent element of the `<iframe>`, then this method will show the Web Chat view.
 
 #### tellFrameTo(`message`)
 Use this method to manipulate the chat `<iframe>` inside of the parent element on your page. Use the table below to see what you can tell the frame to do. All `message` values should be of type `String`.
@@ -193,6 +206,8 @@ Use this method to manipulate the chat `<iframe>` inside of the parent element o
 `blur` | Take window focus away from the message input in the `<iframe>`
 `reset` | Resets Chat UI with a new Chatter and history
 `deleteHistory` | Clears storage so that a new Chatter will be created upon page refresh
+
+## FAQ
 
 
 ## More
