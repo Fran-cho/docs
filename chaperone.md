@@ -1,17 +1,31 @@
-# Chaperone
+# Ada Chaperone
 
 > Chaperone is a small JavaScript application that embeds your **Ada** chat bot into your web page.
 
 ![ada animated gif](https://user-images.githubusercontent.com/4740147/47372740-5b5dca80-d6b8-11e8-87e7-1b76d48370d8.gif "Ada Animated Gif")
 
+## Table of Contents
+1. [Getting Started](#getting-started)
+    - [Turn on your bot](#turn-on-your-bot)
+    - [Embed Chaperone script](#embed-chaperone-script)
+    - [Instantiate Chaperone](#instantiate-chaperone)
+2. [Advanced Setup](#advanced-setup)
+    - [Turn on your bot](#turn-on-your-bot)
+    - [Turn on your bot](#turn-on-your-bot)
+    - [Turn on your bot](#turn-on-your-bot)
+3. [FAQ](#faq)
+4. [Versioning](#versioning)
+5. [Help](#help)
 
 ## Getting Started
-Getting started with Ada is easy, just follow the steps below. You can see a working example [here](https://jsfiddle.net/c8m8u2y4/70/).
+Getting started with Ada is easy, just follow the steps below. 
 
-#### Turn on your bot
+[**You can see a working example here.**](https://jsfiddle.net/c8m8u2y4/175/)
+
+#### 1. Turn on your bot
 The first step towards adding your Ada chat bot to your web page is to turn on the Web Chat integration in your Settings > Platforms page.
 
-#### Embed Chaperone script
+#### 2. Embed Chaperone script
 The next step is to add the Chaperone embed script to your page inside of your `<head>...</head>` block:
 
 ```html
@@ -23,10 +37,11 @@ The next step is to add the Chaperone embed script to your page inside of your `
 ></script>
 ```
 
-#### Instantiate Chaperone
+#### 3. Instantiate Chaperone
 The last step is to instantiate Chaperone with the script below. You should add the script to the bottom of your document (after the `</body>` tag).
 
 ```html
+...
 </body>
 <script type="text/javascript">
     const adaBot = new AdaChaperone('client-handle'); // Replace with your bot handle
