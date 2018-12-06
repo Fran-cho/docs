@@ -6,13 +6,13 @@
 
 ## Table of Contents
 1. [Getting Started](#getting-started)
-    - [Turn on your bot](#turn-on-your-bot)
-    - [Embed Chaperone script](#embed-chaperone-script)
-    - [Instantiate Chaperone](#instantiate-chaperone)
+    - [Turn on your bot](#1-turn-on-your-bot)
+    - [Embed Chaperone script](#2-embed-chaperone-script)
+    - [Instantiate Chaperone](#3-instantiate-chaperone)
 2. [Advanced Setup](#advanced-setup)
     - [Constructor](#constructorclienthandle-options-callback)
-    - [Turn on your bot](#turn-on-your-bot)
-    - [Turn on your bot](#turn-on-your-bot)
+    - [Options](#options)
+    - [Methods](#methods)
 3. [FAQ](#faq)
 4. [Versioning](#versioning)
 5. [Help](#help)
@@ -104,6 +104,7 @@ The `customStyles` option can be used to override default styles inside the Web 
 <aside class="warning">
 We do not recommend assigning styles to classes you inspect in the DOM. Class naming is subject to change, and can cause your custom styles to break.
 </aside>
+
 
 Selector | Description
 --- | ---
@@ -224,7 +225,21 @@ Use this method to manipulate the Web Chat `<iframe>`. Use the table below to se
 `deleteHistory` | Clears storage so that a new Chatter will be created upon page refresh
 
 ## FAQ
+Commonly asked questions:
 
+##### Q: How do I set up Ada Chat in mobile?
+**A:** Chaperone is only intended to be used in Web Apps, and is not suitable for mobile. Instead, we recommend you add a link to your Ada Chat bot inside a Webview. By not using Chaperone you will lose access to the Chaperone options and methods listed above. Fortunately, we have made many of these features available to you via query parameters in your Chat URL. 
 
-## More
+See the table below for a list of available parameters.
+
+##### Q: How do I customize the look of the Ada Chat button?
+**A:** 
+
+##### Q: How do I have the bot only appear during certain hours?
+**A:**
+
+##### Q: How do I customize the look and feel of Ada Chat?
+**A:**
+
+## Help
 Need some help? Get in touch with us at [help@ada.support](mailto:help@ada.support).
