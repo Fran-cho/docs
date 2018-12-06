@@ -63,7 +63,7 @@ Parameter | Type | Description
 `options` | `Object` | Options to customize the Ada bot. See [Options](#options) below
 `callback` | `Function` | Specifies a function to be called after the `<iframe>` is finished being set up
 
-Example:
+**Example:**
 ```html
 <script type="text/javascript">
   const adaBot = new AdaChaperone('client-handle', {
@@ -83,7 +83,7 @@ Options are passed to Chaperone as an object in the second parameter of your ins
 #### `chatterTokenCallback @type {Function}`
 Specifies a callback function to be called when the Chatter has been set. The Chatter token is passed to the callback as an argument.
 
-Example:
+**Example:**
 ```html
 <script type="text/javascript">
   const adaBot = new AdaChaperone('client-handle', {
@@ -126,7 +126,7 @@ Selector | Description
 `.g-message` | The base message selector
 `.g-message--is-owned-by-user` | The selector for messages from the end user
 
-Example:
+**Example:**
 ```html
 <script type="text/javascript">
   const adaBot = new AdaChaperone('client-handle', {
@@ -138,7 +138,7 @@ Example:
 #### `greetingHandle @type {String}`
 This can be used to customize the greeting messages that new users see. This is useful for setting page-specific greetings across your app. The `greetingHandle` should correspond to the title of the Answer you would like to use in your Ada dashboard.
 
-Example:
+**Example:**
 ```html
 <script type="text/javascript">
   const adaBot = new AdaChaperone('client-handle', {
@@ -150,7 +150,7 @@ Example:
 #### `language @type {String}`
 Takes in a language code to programatically set the bot language. Languages must first be turned on in the **Settings > Multilingual** page of your dashboard. Language codes follow the [ISO 639-1 language format](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
-Example:
+**Example:**
 ```html
 <script type="text/javascript">
   const adaBot = new AdaChaperone('client-handle', {
@@ -165,7 +165,7 @@ By default, the Web Chat will open in a new window on mobile devices. If you'd p
 #### `parentElement @type {String|Object}`
 Specifies where to mount the `<iframe>` if the default side drawer is not desired. Accepts the `HTMLNode` or `id` of the desired parent element.
 
-Example:
+**Example:**
 ```html
 <body>
   ...
@@ -198,7 +198,7 @@ This method cannot be used with the `parentElement` option.
 #### `setMetaField(fieldName, value) @param {String} @param {String}`
 You can use this method to set meta properties for the Chatter. This can be useful for setting information about your end users. For example, you may wish to track the `email` and `name` for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the Conversations view of your Ada dashboard.
 
-Example:
+**Example:**
 ```javascript
 adaBot.setMetaField('email', 'joe-schmoe123@gmail.com');
 adaBot.setMetaField('name', 'Joe Schmoe');
@@ -209,7 +209,7 @@ Can be used to programatically open the Web Chat view. This is useful if you wou
 
 This method cannot be used with the `parentElement` option.
 
-Example:
+**Example:**
 ```html
 <button onclick="adaBot.show()">Open Chat</button>
 ```
@@ -227,18 +227,18 @@ Use this method to manipulate the Web Chat `<iframe>`. Use the table below to se
 ## FAQ
 Commonly asked questions:
 
-##### Q: How do I set up Ada Chat in mobile?
+#### Q: How do I set up Ada Chat in mobile?
 **A:** Chaperone is only intended to be used in Web Apps, and is not suitable for mobile. Instead, we recommend you add a link to your Ada Chat bot inside a Webview. By not using Chaperone you will lose access to the Chaperone options and methods listed above. Fortunately, we have made many of these features available to you via query parameters in your Chat URL. 
 
 See the table below for a list of available parameters.
 
-##### Q: How do I customize the look of the Ada Chat button?
+#### Q: How do I customize the look of the Ada Chat button?
 **A:** 
 
-##### Q: How do I have the bot only appear during certain hours?
+#### Q: How do I have the bot only appear during certain hours?
 **A:**
 
-##### Q: How do I customize the look and feel of Ada Chat?
+#### Q: How do I customize the look and feel of Ada Chat?
 **A:**
 
 ## Help
