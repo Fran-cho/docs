@@ -235,9 +235,17 @@ Key | Value | Type | Description
 `private` | NA | Fragment Identifier | Used to forget the Chat session on refresh. In the future this will be reimplemented as a query parameter
 
 #### Q: How do I customize the look of the Ada Chat button?
-**A:** There are many ways to do this, and ultimately this will be up to your team's developers. That being said, we recommend targetting the `button.ada-chat-button` element and overriding styles with `!important`. 
+**A:** There are many ways to do this, and ultimately this will be up to your team's developers. That being said, we recommend targetting the `button.ada-chat-button` element in your CSS and overriding existing styles. 
 
 Please note that we cannot guarantee custom changes will work with future versions of Chaperone.
+
+**Example:**
+
+```css
+button.ada-chat-button {
+  left: 24px; // This will position the Chat button on the left side of the screen
+}
+```
 
 #### Q: How do I have the bot only appear during certain hours?
 **A:** If the bot should only appear during certain times, you will need to wrap you Ada scripts in condition to check if the user is within scheduled operation hours. If you only require that certain messages be within a scheduled time window, we recommend that you make use of Scheduled Blocks in the Answer editor of your Ada dashboard. 
