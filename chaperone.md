@@ -242,6 +242,7 @@ Please note that we cannot guarantee custom changes will work with future versio
 **Example:**
 
 ```css
+// This line in your CSS
 button.ada-chat-button {
   left: 24px; // This will position the Chat button on the left side of the screen
 }
