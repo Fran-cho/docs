@@ -1,6 +1,6 @@
 # Ada Chaperone
 
-> Chaperone is a small JavaScript application that embeds your **Ada** chat bot into your web page.
+> Chaperone is a small JavaScript application that embeds your **Ada** Chat bot into your web page.
 
 ![ada animated gif](https://user-images.githubusercontent.com/4740147/47372740-5b5dca80-d6b8-11e8-87e7-1b76d48370d8.gif "Ada Animated Gif")
 
@@ -23,7 +23,7 @@ Getting started with Ada is easy, just follow the steps below.
 [**You can see a working example here.**](https://jsfiddle.net/c8m8u2y4/175/)
 
 ### 1. Turn on your bot
-The first step towards adding your Ada Chat Bot to your web page is to turn on the Web Chat integration in your Settings > Platforms page.
+The first step towards adding your Ada Chat Bot to your web page is to turn on the Web Chat integration in your **Settings > Platforms** page.
 
 ### 2. Embed Chaperone script
 The next step is to add the Chaperone embed script to your page inside of your `<head>...</head>` block:
@@ -52,9 +52,9 @@ The last step is to instantiate Chaperone with the script below. You should add 
 That's it! If you've turned on Web Chat in your settings, you should see a small question-mark button on the bottom right corner of your page which will toggle the Web Chat into and out of view.
 
 ## Advanced Setup
-Chaperone supports numerous **options** and **methods** to help you customize the look and behaviour of your bot.
+Chaperone supports numerous [options](#options) and [methods](#methods) to help you customize the look and behaviour of your bot.
 
-### constructor(`clientHandle`, `options`, `callback`)
+### `constructor(clientHandle, options, callback)`
 You can specify three parameters which will dictate how your instance of `AdaChaperone` is created.
 
 Parameter | Type | Description
@@ -76,11 +76,12 @@ Parameter | Type | Description
 </script>
 </html>
 ```
+---
 
 ### Options
 Options are passed to Chaperone as an object in the second parameter of your instantiation call. A full list of available options is provided below:
 
-#### `chatterTokenCallback @type {Function}`
+#### `chatterTokenCallback` `@type {Function}`
 Specifies a callback function to be called when the Chatter has been set. The Chatter token is passed to the callback as an argument.
 
 **Example:**
@@ -94,11 +95,11 @@ Specifies a callback function to be called when the Chatter has been set. The Ch
 </script>
 ```
 
-#### `cluster @type {String}`
+#### `cluster` `@type {String}`
 Specifies the Kubernetes cluster to be used. Unless directed an Ada team member you will not need to change this value.
 
 
-#### `customStyles @type {String}`
+#### `customStyles` `@type {String}`
 The `customStyles` option can be used to override default styles inside the Web Chat iFrame. The value of the string should be the CSS rule-set you wish to apply inside the iFrame. A list of CSS selectors available for targetting can be found in the table below. 
 
 | WARNING: We do not recommend assigning styles to classes you inspect in the DOM. Class naming is subject to change, and can cause your custom styles to break. |
@@ -133,7 +134,7 @@ Selector | Description
 </script>
 ```
 
-#### `greetingHandle @type {String}`
+#### `greetingHandle` `@type {String}`
 This can be used to customize the greeting messages that new users see. This is useful for setting page-specific greetings across your app. The `greetingHandle` should correspond to the title of the Answer you would like to use in your Ada dashboard.
 
 **Example:**
@@ -145,7 +146,7 @@ This can be used to customize the greeting messages that new users see. This is 
 </script>
 ```
 
-#### `language @type {String}`
+#### `language` `@type {String}`
 Takes in a language code to programatically set the bot language. Languages must first be turned on in the **Settings > Multilingual** page of your Ada dashboard. Language codes follow the [ISO 639-1 language format](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
 **Example:**
@@ -157,10 +158,10 @@ Takes in a language code to programatically set the bot language. Languages must
 </script>
 ```
 
-#### `mobileOverlay @type {Boolean}`
+#### `mobileOverlay` `@type {Boolean}`
 By default, the Web Chat will open in a new window on mobile devices. If you'd prefer to have it open as an overlay overtop the current window, set this option to `true`.
 
-#### `parentElement @type {String|Object}`
+#### `parentElement` `@type {String|Object}`
 Specifies where to mount the `<iframe>` if the default side drawer is not desired. Accepts the `HTMLNode` or `id` of the desired parent element.
 
 **Example:**
@@ -194,7 +195,7 @@ Can be used to programatically close the Web Chat view.
 This method cannot be used with the `parentElement` option.
 
 
-#### `setMetaField(fieldName, value) @param {String} @param {String}`
+#### `setMetaField(fieldName, value)` `@param {String}` `@param {String}`
 You can use this method to set meta properties for the Chatter. This can be useful for setting information about your end users. For example, you may wish to track the `email` and `name` for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the Conversations view of your Ada dashboard.
 
 **Example:**
@@ -213,7 +214,7 @@ This method cannot be used with the `parentElement` option.
 <button onclick="adaBot.show()">Open Chat</button>
 ```
 
-#### `tellFrameTo(message) @param {String}`
+#### `tellFrameTo(message)` `@param {String}`
 Use this method to manipulate the Web Chat `<iframe>`. Use the table below to see what you can tell the frame to do.
 
 `message` | Description
@@ -227,7 +228,7 @@ Use this method to manipulate the Web Chat `<iframe>`. Use the table below to se
 Commonly asked questions:
 
 #### Q: How do I set up Ada Chat in mobile?
-**A:** Chaperone is only intended to be used in Web Apps, and is not suitable for mobile. Instead, we recommend you add a link to your Ada Chat bot inside a Webview. By not using Chaperone you will lose access to the Chaperone options and methods listed above. Fortunately, we have made many of these features available to you via query parameters in your Chat URL. 
+**A:** Chaperone is only intended to be used in Web Apps, and is not suitable for mobile. Instead, we recommend you add a link to your Ada Chat bot [inside a Webview](https://github.com/AdaSupport/docs/blob/nh-chaperone-rewrite/embed-mobile.md). By not using Chaperone you will lose access to the Chaperone options and methods listed above. Fortunately, we have made many of these features available to you via query parameters in your Chat URL. 
 
 See the table below for a list of available parameters.
 
