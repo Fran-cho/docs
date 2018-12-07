@@ -101,10 +101,8 @@ Specifies the Kubernetes cluster to be used. Unless directed an Ada team member 
 #### `customStyles @type {String}`
 The `customStyles` option can be used to override default styles inside the Web Chat iFrame. The value of the string should be the CSS rule-set you wish to apply inside the iFrame. A list of CSS selectors available for targetting can be found in the table below. 
 
-<aside class="warning">
-We do not recommend assigning styles to classes you inspect in the DOM. Class naming is subject to change, and can cause your custom styles to break.
-</aside>
-
+| WARNING: We do not recommend assigning styles to classes you inspect in the DOM. Class naming is subject to change, and can cause your custom styles to break. |
+| --- |
 
 Selector | Description
 --- | ---
@@ -182,6 +180,7 @@ Specifies where to mount the `<iframe>` if the default side drawer is not desire
 #### `private @type {Boolean}`
 If set to `true`, this will put Web Chat into "Private" mode. This will cause Web Chat to forget conversation history on refresh. This is effectively the same as setting your Web Chat platform persitence to "Forget After Reload" in the **Settings > Platforms** page of your Ada dashboard.
 
+---
 
 ### Methods
 At any time you can tell your `AdaChaperone` instance to do a handful of things. The available methods depend on how you instantiated the `AdaChaperone` instance.
@@ -234,10 +233,10 @@ See the table below for a list of available parameters.
 
 Key | Value | Type | Description
 --- | --- | --- | ---
-`?greeting` | The greeting Answer ID | Query String | Specify a custom greeting
-`?language` | A supported ISO 639-1 language | Query String | Set the Web Chat language
-`?*` | Any other key is treated as a meta field | Query String | Used to pass meta informaton about an end user
-`#private` | NA | Fragment Identifier | Used to forget the Chat session on refresh. In the future this will be reimplemented as a query parameter
+`greeting` | The greeting Answer ID | Query String | Specify a custom greeting
+`language` | A supported ISO 639-1 language | Query String | Set the Web Chat language
+`*` | Any other key is treated as a meta field | Query String | Used to pass meta informaton about an end user
+`private` | NA | Fragment Identifier | Used to forget the Chat session on refresh. In the future this will be reimplemented as a query parameter
 
 #### Q: How do I customize the look of the Ada Chat button?
 **A:** There are many ways to do this, and ultimately this will be up to your team's developers. That being said, we recommend targetting the `button.ada-chat-button` element and overriding styles with `!important`. 
