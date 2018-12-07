@@ -223,8 +223,6 @@ Use this method to manipulate the Web Chat `<iframe>`. Use the table below to se
 `deleteHistory` | Clears storage so that a new Chatter will be created upon page refresh
 
 ## FAQ
-Commonly asked questions:
-
 #### Q: How do I set up Ada Chat in mobile?
 **A:** Chaperone is only intended to be used in web apps, and is not suitable for native mobile applications. Instead, we recommend you include the URL of your Ada Chat bot [inside a Webview](https://github.com/AdaSupport/docs/blob/nh-chaperone-rewrite/embed-mobile.md). By not using Chaperone you will lose access to the Chaperone options and methods listed above. Fortunately, we have made many of these features available to you via query parameters in your Chat URL. 
 
