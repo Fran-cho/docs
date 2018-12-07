@@ -10,7 +10,6 @@
     - [Embed Chaperone script](#2-embed-chaperone-script)
     - [Instantiate Chaperone](#3-instantiate-chaperone)
 2. [Advanced Setup](#advanced-setup)
-    - [Constructor](#constructorclienthandle-options-callback)
     - [Options](#options)
     - [Methods](#methods)
 3. [FAQ](#faq)
@@ -54,7 +53,7 @@ That's it! If you've turned on Web Chat in your settings, you should see a small
 ## Advanced Setup
 Chaperone supports numerous [options](#options) and [methods](#methods) to help you customize the look and behaviour of your bot.
 
-### `constructor(clientHandle, options, callback)`
+#### `constructor(clientHandle, options, callback)`
 You can specify three parameters which will dictate how your instance of `AdaChaperone` is created.
 
 Parameter | Type | Description
