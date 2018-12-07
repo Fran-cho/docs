@@ -148,7 +148,7 @@ This can be used to customize the greeting messages that new users see. This is 
 ```
 
 #### `language @type {String}`
-Takes in a language code to programatically set the bot language. Languages must first be turned on in the **Settings > Multilingual** page of your dashboard. Language codes follow the [ISO 639-1 language format](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
+Takes in a language code to programatically set the bot language. Languages must first be turned on in the **Settings > Multilingual** page of your Ada dashboard. Language codes follow the [ISO 639-1 language format](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
 **Example:**
 ```html
@@ -180,7 +180,7 @@ Specifies where to mount the `<iframe>` if the default side drawer is not desire
 ```
 
 #### `private @type {Boolean}`
-If set to `true`, this will put Web Chat into "Private" mode. This will cause Web Chat to forget conversation history on refresh. This is effectively the same as setting your Web Chat platform persitence to "Forget After Reload" in the **Settings > Platforms** page of your dashboard.
+If set to `true`, this will put Web Chat into "Private" mode. This will cause Web Chat to forget conversation history on refresh. This is effectively the same as setting your Web Chat platform persitence to "Forget After Reload" in the **Settings > Platforms** page of your Ada dashboard.
 
 
 ### Methods
@@ -232,14 +232,23 @@ Commonly asked questions:
 
 See the table below for a list of available parameters.
 
+Key | Value | Type | Description
+--- | --- | --- | ---
+`?greeting` | The greeting Answer ID | Query String | Specify a custom greeting
+`?language` | A supported ISO 639-1 language | Query String | Set the Web Chat language
+`?*` | Any other key is treated as a meta field | Query String | Used to pass meta informaton about an end user
+`#private` | NA | Fragment Identifier | Used to forget the Chat session on refresh. In the future this will be reimplemented as a query parameter
+
 #### Q: How do I customize the look of the Ada Chat button?
-**A:** 
+**A:** There are many ways to do this, and ultimately this will be up to your team's developers. That being said, we recommend targetting the `button.ada-chat-button` element and overriding styles with `!important`. 
+
+Please note that we cannot guarantee custom changes will work with future versions of Chaperone.
 
 #### Q: How do I have the bot only appear during certain hours?
-**A:**
+**A:** If the bot should only appear during certain times, you will need to wrap you Ada scripts in condition to check if the user is within scheduled operation hours. If you only require that certain messages be within a scheduled time window, we recommend that you make use of Scheduled Blocks in the Answer editor. 
 
 #### Q: How do I customize the look and feel of Ada Chat?
-**A:**
+**A:** Basic customization, such as client tint colour, can be modified from the **Settings > General** page of your Ada dashboard. If you require additional customization, you can make use of the [customStyles](#custom-styles) Chaperone option above.
 
 ## Help
 Need some help? Get in touch with us at [help@ada.support](mailto:help@ada.support).
