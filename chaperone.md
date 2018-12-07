@@ -250,5 +250,10 @@ Please note that we cannot guarantee custom changes will work with future versio
 #### Q: How do I customize the look and feel of Ada Chat?
 **A:** Basic customization, such as client tint colour, can be modified from the **Settings > General** page of your Ada dashboard. If you require additional customization, you can make use of the [customStyles](#custom-styles) Chaperone option above.
 
+##Versioning
+Currently, the embed script for Ada Chaperone is versioned. This means that in order to receive new Chaperone updates you will need to upgrade to the latest version. The latest embed script can always be found within this document, or within the Chat modal of the **Settings > Platforms** page in your Ada dashboard.
+
+In the (near) future we intend to release a versionless Chaperone embed script. Stay tuned!
+
 ## Help
 Need some help? Get in touch with us at [help@ada.support](mailto:help@ada.support).
