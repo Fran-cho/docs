@@ -9,7 +9,7 @@
     - [Turn on your bot](#1-turn-on-your-bot)
     - [Embed Chaperone script](#2-embed-chaperone-script)
     - [Instantiate Chaperone](#3-instantiate-chaperone)
-2. [Advanced Setup](#advanced-setup)
+2. [Configuring Your Bot](#configuring-your-bot)
     - [Options](#options)
     - [Methods](#methods)
 3. [FAQ](#faq)
@@ -25,7 +25,7 @@ The first step towards adding your Ada Chat Bot to your web page is to turn on t
 ![Ada Dashboard Chat Settings](https://user-images.githubusercontent.com/9045634/49764964-f2013d80-fc9e-11e8-8e8e-52ed7774b3bf.png "Ada Dashboard Chat Settings")
 
 ### 2. Embed Chaperone script
-The next step is to add the Chaperone embed script to your page inside of your `<head>...</head>` block:
+Once you have your website all ready-to-go, find the page where you'd like to embed the Ada Chat bot. This will be a `.html` file (or equivalent). Here you will need to paste the following into the `<head>...</head>` block:
 
 ```html
 <script
@@ -36,8 +36,10 @@ The next step is to add the Chaperone embed script to your page inside of your `
 ></script>
 ```
 
+This snippet handles retrieving the Chaperone script from our CDN. 
+
 ### 3. Instantiate Chaperone
-The last step is to instantiate Chaperone with the script below. You should add the script to the bottom of your document (after the `</body>` tag).
+The last step is to create a new Chaperone instance with the script below. You should add the script to the bottom of your document (after the `</body>` tag).
 
 ```html
 ...
@@ -52,8 +54,8 @@ That's it! You should now see a small question-mark button on the bottom right c
 
 [**You can see a working example here.**](https://jsfiddle.net/c8m8u2y4/175/)
 
-## Advanced Setup
-Chaperone supports numerous [options](#options) and [methods](#methods) to help you customize the look and behaviour of your bot.
+## Configuring Your Bot
+Chaperone supports numerous [options](#options) and [methods](#methods) to help you customize the look and behaviour of your bot. Options are set once when you [instantiate Chaperone](#3-instantiate-chaperone), and determine intrinsic properties like bot style and behaviour. Methods are actions that are called on the Chaperone instance.
 
 #### `constructor(clientHandle, options, callback)`
 You can specify three parameters which will dictate how your instance of `AdaChaperone` is created.
