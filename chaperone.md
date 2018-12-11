@@ -62,19 +62,20 @@ You can specify three parameters which will dictate how your instance of `AdaCha
 
 Parameter | Type | Description
 --- | --- | ---
-`clientHandle` | `String` | Your bot's handle
+`clientHandle` | `String` | Your bot's handle<sup>1</sup>
 `options` | `Object` | Options to customize the Ada bot. See [Options](#options) below
 `callback` | `Function` | Specifies a function to be called after the `<iframe>` is finished being set up
+<sup>1</sup> The handle of your bot is generally the name of your company. This will be provided to you by your account manager.
 
 **Example:**
 ```html
 <script type="text/javascript">
   const adaBot = new AdaChaperone('client-handle', {
-      "parentElement": "myElement",
-      "customStyles": "*{color:yellow !important;}",
-      "private": true
+    "parentElement": "myElement",
+    "customStyles": "*{color:blue !important;}",
+    "private": true
   }, () => {
-      console.log("Callback triggered!");
+    console.log("Callback triggered!");
   });
 </script>
 </html>
@@ -251,6 +252,7 @@ button.ada-chat-button {
   left: 24px; // This will position the Chat button on the left side of the screen
 }
 ```
+[**You can experiment with a working example here.**](https://jsfiddle.net/2jh94oru/)
 
 #### Q: How do I have the bot only appear during certain hours?
 **A:** If the bot should only appear during certain times, you will need to wrap you Ada scripts in condition to check if the user is within scheduled operation hours. If you only require that certain messages be within a scheduled time window, we recommend that you make use of Scheduled Blocks in the Answer editor of your Ada dashboard. 
