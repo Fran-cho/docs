@@ -188,7 +188,7 @@ Specifies where to mount the `<iframe>` if the default side drawer is not desire
 ```
 
 #### `private` `@type {Boolean}`
-If set to `true`, this will put Web Chat into "Private" mode. This will cause Web Chat to forget conversation history on refresh. This is effectively the same as setting your Web Chat platform persitence to "Forget After Reload" in the **Settings > Platforms** page of your Ada dashboard.
+If set to `true`, this will put Web Chat into "Private" mode. This will cause Web Chat to forget conversation history on refresh. This is effectively the same as setting your Web Chat platform persistence to "Forget After Reload" in the **Settings > Platforms** page of your Ada dashboard. More information on persistence can be found [here](https://ada.support/articles/chatter-persistence/).
 
 ---
 
