@@ -5,19 +5,20 @@
 ![ada animated gif](https://user-images.githubusercontent.com/4740147/47372740-5b5dca80-d6b8-11e8-87e7-1b76d48370d8.gif "Ada Animated Gif")
 
 ## Table of Contents
-1. [Getting Started](#getting-started)
+1. [Prerequisites](#prerequisites)
+2. [Getting Started](#getting-started)
     - [Turn on your bot](#1-turn-on-your-bot)
     - [Embed Chaperone script](#2-embed-chaperone-script)
     - [Instantiate Chaperone](#3-instantiate-chaperone)
-2. [Configuring Your Bot](#configuring-your-bot)
+3. [Configuring Your Bot](#configuring-your-bot)
     - [Options](#options)
     - [Methods](#methods)
-3. [FAQ](#faq)
-4. [Versioning](#versioning)
-5. [Help](#help)
+4. [FAQ](#faq)
+5. [Versioning](#versioning)
+6. [Questions](#questions)
 
 ## Prerequisites 
-This document is intended for bot specialists and developers with some knowledge of HTML.
+This document is intended for bot specialists and developers with working knowledge of HTML. For some of the advanced setup, basic knowledge of JavaScript is required. The document also assumes you have a hosted web page that you have write access to. 
 
 ## Getting Started
 Getting started with Ada is easy, just follow the steps below. 
