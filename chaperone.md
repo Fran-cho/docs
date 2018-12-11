@@ -203,7 +203,7 @@ Can be used to programatically close the Web Chat view. This method cannot be us
 
 
 #### `setMetaField(fieldName, value)` `@param {String}` `@param {String}`
-You can use this method to set meta properties for the Chatter. This can be useful for tracking information about your end users. For example, you may wish to track the `email` and `name` for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the Conversations view of your Ada dashboard.
+You can use this method to set meta properties for the Chatter. This can be useful for tracking information about your end users. For example, you may wish to track the `email` and `name` for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the **Conversations** page of your Ada dashboard.
 
 **Example:**
 ```javascript
