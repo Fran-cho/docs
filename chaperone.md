@@ -26,7 +26,7 @@ Getting started with Ada is easy, just follow the steps below.
 ### 1. Turn on your bot
 The first step towards adding your Ada Chat Bot to your web page is to turn on the Web Chat integration in your **Settings > Platforms** page.
 
-![Ada Dashboard Chat Settings](https://user-images.githubusercontent.com/9045634/49764964-f2013d80-fc9e-11e8-8e8e-52ed7774b3bf.png "Ada Dashboard Chat Settings")
+<img width="600" alt="Ada Dashboard Chat Settings" src="https://user-images.githubusercontent.com/9045634/49764964-f2013d80-fc9e-11e8-8e8e-52ed7774b3bf.png">
 
 ### 2. Embed Chaperone script
 Once you have your website all ready-to-go, find the page where you'd like to embed the Ada Chat bot. This will be a `.html` file (or equivalent). Here you will need to paste the following into the `<head>...</head>` block:
