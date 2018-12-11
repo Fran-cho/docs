@@ -16,6 +16,9 @@
 4. [Versioning](#versioning)
 5. [Help](#help)
 
+## Prerequisites 
+This document is intended for bot specialists and developers with some knowledge of HTML.
+
 ## Getting Started
 Getting started with Ada is easy, just follow the steps below. 
 
@@ -252,7 +255,7 @@ button.ada-chat-button {
   left: 24px; // This will position the Chat button on the left side of the screen
 }
 ```
-[**You can experiment with a working example here.**](https://jsfiddle.net/2jh94oru/)
+[**You can experiment with a working example here.**](https://jsfiddle.net/2jh94oru/3/)
 
 #### Q: How do I have the bot only appear during certain hours?
 **A:** If the bot should only appear during certain times, you will need to wrap you Ada scripts in condition to check if the user is within scheduled operation hours. If you only require that certain messages be within a scheduled time window, we recommend that you make use of Scheduled Blocks in the Answer editor of your Ada dashboard. 
