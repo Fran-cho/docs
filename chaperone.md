@@ -69,6 +69,7 @@ Parameter | Type | Description
 `clientHandle` | `String` | Your bot's handle<sup>1</sup>
 `options` | `Object` | Options to customize the Ada bot. See [Options](#options) below
 `callback` | `Function` | Specifies a function to be called after the `<iframe>` is finished being set up
+
 <sup>1</sup> The handle of your bot is generally the name of your company. This will be provided to you by your account manager.
 
 **Example:**
