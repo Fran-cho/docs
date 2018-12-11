@@ -260,7 +260,7 @@ button.ada-chat-button {
 [**You can experiment with a working example here.**](https://jsfiddle.net/2jh94oru/3/)
 
 #### Q: How do I have the bot only appear during certain hours?
-**A:** If the bot should only appear during certain times, you will need to wrap you Ada scripts in condition to check if the user is within scheduled operation hours. If you only require that certain messages be within a scheduled time window, we recommend that you make use of Scheduled Blocks in the Answer editor of your Ada dashboard. 
+**A:** If the bot should only appear during certain times, you will need to wrap you Ada scripts in a condition to check if the user is within scheduled operation hours. If you only require that certain messages be within a scheduled time window, we recommend that you make use of Scheduled Blocks in the **Answer** page of your Ada dashboard. 
 
 #### Q: How do I customize the look and feel of Ada Chat?
 **A:** Basic customization, such as client tint colour, can be modified from the **Settings > General** page of your Ada dashboard. If you require additional customization, you can make use of the [customStyles](#customstyles-type-string) Chaperone option above.
