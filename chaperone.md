@@ -54,7 +54,7 @@ The last step is to create a new Chaperone instance with the script below. You s
 </html>
 ```
 
-That's it! You should now see a small question-mark button on the bottom right corner of your page which will toggle the Web Chat in and out of view.
+That's it! You should now see a small question-mark button on the bottom right corner of your page. Clicking the button will toggle the Web Chat in and out of view.
 
 [**You can see a working example here.**](https://jsfiddle.net/c8m8u2y4/175/)
 
