@@ -33,7 +33,7 @@ Once you have your website all ready-to-go, find the page where you'd like to em
 
 ```html
 <script
-  src="https://static.ada.support/embed.f8b282eb.min.js"
+  src="https://static.ada.support/embed.d233abdf.min.js"
   integrity="sha384-A0EOe/GwB+wqNjGniuVFup2J8YuMTrTibM487C3K8qHcQkY4J5Ib2PcV9MIXbnxl"
   crossorigin="anonymous"
   charset="utf-8"
