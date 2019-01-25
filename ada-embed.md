@@ -28,7 +28,7 @@ The first step towards adding your Ada Chat Bot to your web page is to turn on t
 
 <img width="600" alt="Ada Dashboard Chat Settings" src="https://user-images.githubusercontent.com/9045634/49764964-f2013d80-fc9e-11e8-8e8e-52ed7774b3bf.png">
 
-### 2. Embed Chaperone script
+### 2. Embed script
 Once you have your website all ready-to-go, find the page where you'd like to embed the Ada Chat bot. This will be a `.html` file (or equivalent). Here you will need to paste the following into the `<head>...</head>` block:
 
 ```html
@@ -41,21 +41,21 @@ Once you have your website all ready-to-go, find the page where you'd like to em
 </script>
 ```
 
-That's it! You should now see a small question-mark button on the bottom right corner of your page. Clicking the button will toggle the Web Chat in and out of view.
+That's it! You should now see a small question-mark button on the bottom right corner of your page. Clicking the button will toggle the Web Chat in and out of view. If your bot does not show up, you may have specified an invalid client `handle`. 
 
 [**You can see a working example here.**](https://jsfiddle.net/Lytb2uox/)
 
 ## Configuring Your Bot
-Chaperone supports numerous [options](#options) and [methods](#methods) to help you customize the look and behaviour of your bot. Options are set once when you [instantiate Chaperone](#3-instantiate-chaperone), and determine intrinsic properties like bot style and behaviour. Methods are actions that are called on the Chaperone instance.
+Ada Embed supports numerous [settings](#settings) and [actions](#actions) to help you customize the look and behaviour of your bot. Settings are set in the `adaSettings` object when you [embed your script](#2-embed-script). They determine intrinsic properties like bot style and behaviour. Conversely, actions can be called at any point in time to toggle Chat, update user meta data, and more.
 
-#### `constructor(clientHandle, options, callback)`
-You can specify three parameters which will dictate how your instance of `AdaChaperone` is created.
+#### `adaEmbed(action: string, payload?: object)`
+The `adaEmbed` function takes two parameters, action and payload. A list of the available actions is 
 
-Parameter | Type | Description
+Action | Payload | Description
 --- | --- | ---
-`clientHandle` | `String` | Your bot's handle<sup>1</sup>
-`options` | `Object` | Options to customize the Ada bot. See [Options](#options) below
-`callback` | `Function` | Specifies a function to be called after the `<iframe>` is finished being set up
+`start` | `Object` | Your bot's handle<sup>1</sup>
+`stop` |  | Options to customize the Ada bot. See [Options](#options) below
+`reset` |  | Specifies a function to be called after the `<iframe>` is finished being set up
 
 <sup>1</sup> The handle of your bot is generally the name of your company. This will be provided to you by your account manager.
 
