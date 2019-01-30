@@ -6,7 +6,7 @@
 
 ## Table of Contents
 1. [Prerequisites](#prerequisites)
-2. [Getting Started](#getting-started)
+2. [Quick Start](#quick-start)
     - [Turn on your bot](#1-turn-on-your-bot)
     - [Embed Chaperone script](#2-embed-chaperone-script)
     - [Instantiate Chaperone](#3-instantiate-chaperone)
@@ -28,54 +28,42 @@ The first step towards adding your Ada Chat Bot to your web page is to turn on t
 
 <img width="600" alt="Ada Dashboard Chat Settings" src="https://user-images.githubusercontent.com/9045634/49764964-f2013d80-fc9e-11e8-8e8e-52ed7774b3bf.png">
 
-### 2. Embed script
-Once you have your website all ready-to-go, find the page where you'd like to embed the Ada Chat bot. This will be a `.html` file (or equivalent). Here you will need to paste the following into the `<head>...</head>` block:
+### 2. Quick Start
+Once you have your website all ready-to-go, find the page where you'd like to embed the Ada Chat bot. This will be a `.html` file (or equivalent). Here you will need to paste the following into the `<head>...</head>` block. Be sure to replace the example data-handle with your own.
 
 ```html
-<script type="text/javascript">
-  window.adaSettings = {
-    handle: "ada-example" // Replace with your bot handle
-  };
-
-  !function(){const t=document.createElement("script");t.onload=function(){adaEmbed("start",window.adaSettings)},t.src="https://static.ada.support/embed.js",t.crossOrigin="anonymous",t.charset="utf-8",document.head.appendChild(t)}();
-</script>
+<script 
+  async 
+  id="__ada" 
+  data-handle="ada-example"
+  src="https://static.ada.support/embed.js"
+></script>
 ```
 
-That's it! You should now see a small question-mark button on the bottom right corner of your page. Clicking the button will toggle the Web Chat in and out of view. If your bot does not show up, you may have specified an invalid client `handle`. 
+That's it! You should now see a small question mark button on the bottom right corner of your page. Clicking the button will toggle the Web Chat in and out of view.
 
-[**You can see a working example here.**](https://jsfiddle.net/Lytb2uox/)
+[**You can see a working example here.**](https://jsfiddle.net/vr87utse/)
 
 ## Configuring Your Bot
 Ada Embed supports numerous [settings](#settings) and [actions](#actions) to help you customize the look and behaviour of your bot. Settings are set in the `adaSettings` object when you [embed your script](#2-embed-script). They determine intrinsic properties like bot style and behaviour. Conversely, actions can be called at any point in time to toggle Chat, update user meta data, and more.
 
-#### `adaEmbed(action: string, payload?: object)`
-The `adaEmbed` function takes two parameters, action and payload. A list of the available actions is 
+### Settings
+Settings are set on the window object as `window.adaSettings = {}`. A full list of available settings is provided below:
 
-Action | Payload | Description
---- | --- | ---
-`start` | `Object` | Your bot's handle<sup>1</sup>
-`stop` |  | Options to customize the Ada bot. See [Options](#options) below
-`reset` |  | Specifies a function to be called after the `<iframe>` is finished being set up
-
-<sup>1</sup> The handle of your bot is generally the name of your company. This will be provided to you by your account manager.
+#### `adaReadyCallback` `@type {Function}`
+Specifies a callback function to be called when the Embed script has finished setting up. This is especially useful when Embed is loaded `asynchronously`. 
 
 **Example:**
 ```html
 <script type="text/javascript">
-  const adaBot = new AdaChaperone('client-handle', {
-    "parentElement": "myElement",
-    "customStyles": "*{color:blue !important;}",
-    "private": true
-  }, () => {
-    console.log("Callback triggered!");
-  });
+  window.adaSettings = {
+    adaReadyCallback: () => {
+      console.log("Ada Embed is done setting up. Chat support is now available.");
+    },
+    ... // The rest of your settings here
+  }
 </script>
-</html>
 ```
----
-
-### Options
-Options are passed to Chaperone as an object in the second parameter of your instantiation call. A full list of available options is provided below:
 
 #### `chatterTokenCallback` `@type {Function}`
 Specifies a callback function to be called when the Chatter has been set. The Chatter token is passed to the callback as an argument.
@@ -83,11 +71,12 @@ Specifies a callback function to be called when the Chatter has been set. The Ch
 **Example:**
 ```html
 <script type="text/javascript">
-  const adaBot = new AdaChaperone('client-handle', {
-    "chatterTokenCallback": (chatter) => {
+  window.adaSettings = {
+    chatterTokenCallback: (chatter) => {
       console.log("Do something with chatter token: ", chatter);
-    }
-  });
+    },
+    ... // The rest of your settings here
+  }
 </script>
 ```
 
@@ -124,9 +113,10 @@ Selector | Description
 **Example:**
 ```html
 <script type="text/javascript">
-  const adaBot = new AdaChaperone('client-handle', {
-    "customStyles": "*{font-size: 14px !important;}#message-input{background-color: white; border: 1px solid #c1c1c1;}"
-  });
+  window.adaSettings = {
+    customStyles: "*{font-size: 14px !important;}#message-input{background-color: white; border: 1px solid #c1c1c1;}",
+    ... // The rest of your settings here
+  }
 </script>
 ```
 
@@ -136,9 +126,10 @@ This can be used to customize the greeting messages that new users see. This is 
 **Example:**
 ```html
 <script type="text/javascript">
-  const adaBot = new AdaChaperone('client-handle', {
-    "greetingHandle": "My Answer"
-  });
+  window.adaSettings = {
+    greetingHandle: "My Answer",
+    ... // The rest of your settings here
+  }
 </script>
 ```
 
@@ -148,9 +139,10 @@ Takes in a language code to programatically set the bot language. Languages must
 **Example:**
 ```html
 <script type="text/javascript">
-  const adaBot = new AdaChaperone('client-handle', {
-    "language": "fr" // Set bot to french
-  });
+  window.adaSettings = {
+    language: "fr",
+    ... // The rest of your settings here
+  }
 </script>
 ```
 
@@ -162,16 +154,20 @@ Specifies where to mount the `<iframe>` if the default side drawer is not desire
 
 **Example:**
 ```html
+<head>
+  ...
+  <script type="text/javascript">
+    window.adaSettings = {
+      parentElement: document.getElementById("custom-iframe"),
+      ... // The rest of your settings here
+    }
+  </script>
+</head>
 <body>
   ...
   <div id="custom-iframe"></div>
   ...
 </body>
-<script type="text/javascript">
-  const adaBot = new AdaChaperone('client-handle', {
-    "parentElement": document.getElementById("custom-iframe")
-  });
-</script>
 ```
 
 #### `private` `@type {Boolean}`
@@ -179,18 +175,23 @@ If set to `true`, this will put Web Chat into "Private" mode. This will cause We
 
 ---
 
-### Methods
-At any time you can tell your `AdaChaperone` instance to do a handful of things. The available methods depend on how you instantiated the `AdaChaperone` instance.
+### Actions
+Actions can be called from the global `adaEmbed` object. A list of the available actions is available below:
 
-#### `destroy()`
+#### `deleteHistory()`
+
+#### `reset()
+
+#### `setMetaFields(metaFields)` `@param {Object}`
+You can use this method to set meta properties for the Chatter. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the `email` and `name` for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the **Conversations** page of your Ada dashboard. Additionally, the bot can be configured to call the user by name. You can learn more about personalization [here](https://ada.support/articles/personalization/).
+
+#### `start(adaSettings)` `@param {Object}`
+
+#### `stop()`
 Tears down your Chaperone instance. You must do this if you wish to create a new Chaperone instance.
 
-#### `hide()`
+#### `toggle()`
 Can be used to programatically close the Web Chat view. This method cannot be used with the `parentElement` option.
-
-
-#### `setMetaField(fieldName, value)` `@param {String}` `@param {String}`
-You can use this method to set meta properties for the Chatter. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the `email` and `name` for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the **Conversations** page of your Ada dashboard. Additionally, the bot can be configured to call the user by name. You can learn more about personalization [here](https://ada.support/articles/personalization/).
 
 **Example:**
 ```javascript
