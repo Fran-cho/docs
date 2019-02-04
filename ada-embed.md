@@ -179,45 +179,58 @@ If set to `true`, this will put Web Chat into "Private" mode. This will cause We
 Actions can be called from the global `adaEmbed` object. A list of the available actions is available below:
 
 #### `deleteHistory()`
+Deletes the `chatter` used to fetch conversation logs for an end-user from storage. When a user opens a new Chat window a new `chatter` will be generated.
 
-#### `reset()
+**Example:**
+```javascript
+adaEmbed.deleteHistory();
+```
+
+#### `reset()`
+Creates a new `chatter` and refreshes the Chat window.
+
+**Example:**
+```javascript
+adaEmbed.reset();
+```
 
 #### `setMetaFields(metaFields)` `@param {Object}`
 You can use this method to set meta properties for the Chatter. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the `email` and `name` for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the **Conversations** page of your Ada dashboard. Additionally, the bot can be configured to call the user by name. You can learn more about personalization [here](https://ada.support/articles/personalization/).
 
+**Example:**
+```javascript
+adaEmbed.setMetaFields({
+  phone_number: "(123) 456-7890",
+  name: "Ada Lovelace"
+});
+```
+
 #### `start(adaSettings)` `@param {Object}`
-
-#### `stop()`
-Tears down your Chaperone instance. You must do this if you wish to create a new Chaperone instance.
-
-#### `toggle()`
-Can be used to programatically close the Web Chat view. This method cannot be used with the `parentElement` option.
+Used to add the Ada Embed interface to your page. Takes in an optional object for setting customization.
 
 **Example:**
 ```javascript
-adaBot.setMetaField('email', 'joe-schmoe123@gmail.com');
-adaBot.setMetaField('name', 'Joe Schmoe');
+adaEmbed.start({
+  language: "fr",
+  mobileOverlay: true
+});
 ```
 
-#### `show()`
-Can be used to programatically open the Web Chat view. This is useful if you would like to open the Web Chat automatically when the page loads, or when clicking a custom button.
-
-This method cannot be used with the `parentElement` option.
+#### `stop()`
+Removes Ada Embed from your page.
 
 **Example:**
-```html
-<button onclick="adaBot.show()">Open Chat</button>
+```javascript
+adaEmbed.start();
 ```
 
-#### `tellFrameTo(message)` `@param {String}`
-Use this method to manipulate the Web Chat `<iframe>`. Use the table below to see what you can tell the frame to do.
+#### `toggle()`
+Can be used to programatically close the Chat window. This method cannot be used with the `parentElement` option.
 
-`message` | Description
---- | ---
-`focus` | Give window focus to the message input in the `<iframe>`
-`blur` | Take window focus away from the message input in the `<iframe>`
-`reset` | Resets Chat UI with a new Chatter and history
-`deleteHistory` | Clears storage so that a new Chatter will be created upon page refresh
+**Example:**
+```javascript
+adaEmbed.toggle();
+```
 
 ## FAQ
 #### Q: How do I set up Ada Chat in mobile?
