@@ -234,21 +234,26 @@ adaEmbed.toggle();
 
 ## FAQ
 #### Q: How do I set up Ada Chat in mobile?
-**A:** Chaperone is only intended to be used in web apps, and is not suitable for native mobile applications. Instead, we recommend you include the URL of your Ada Chat bot [inside a Webview](https://github.com/AdaSupport/docs/blob/nh-chaperone-rewrite/embed-mobile.md). By not using Chaperone you will lose access to the Chaperone options and methods listed above. Fortunately, we have made many of these features available to you via query parameters in your Chat URL.
+**A:** Ada Embed is currently only available as a Web App. For developers looking to integrate Ada into a mobile App, we recommend you include the URL of your Ada Chat bot directly [inside a Webview](https://github.com/AdaSupport/docs/blob/nh-chaperone-rewrite/embed-mobile.md). By not using Ada Embed you will lose access to the actions and settings interface detailed above. Fortunately, we have made many of these features available to you via query parameters in your Chat URL.
 
 See the table below for a list of available parameters.
 
-Key | Value | Type | Description
---- | --- | --- | ---
-`greeting` | The greeting Answer ID | Query String | Specify a custom greeting
-`language` | A supported ISO 639-1 language | Query String | Set the Web Chat language
-`*` | Any other key is treated as a meta field | Query String | Used to pass meta informaton about an end user
-`private` | `true` or 1 | Query String | Used to forget the Chat session on refresh.
+Key | Value | Description
+--- | --- | ---
+`greeting` | The greeting Answer ID |  Specify a custom greeting
+`language` | A supported ISO 639-1 language |  Set the Web Chat language
+`*` | Any other key is treated as a meta field | Used to pass meta informaton about an end user
+`private` | `true` or 1 | Used to forget the Chat session on refresh.
+
+**Example:**
+```
+https://ada-example.ada.support/chat/?language=fr&name=Ada
+```
 
 #### Q: How do I customize the look of the Ada Chat button?
 **A:** There are many ways to do this, and ultimately this will be up to your team's developers. That being said, we recommend targetting the `button.ada-chat-button` element in your CSS and overriding existing styles.
 
-Please note that we cannot guarantee custom changes will work with future versions of Chaperone.
+Please note that we cannot guarantee custom changes will work with future versions of Ada Embed. In the near future we will support out-of-box client branding to simplify customization. 
 
 **Example:**
 
@@ -258,18 +263,16 @@ button.ada-chat-button {
   left: 24px; // This will position the Chat button on the left side of the screen
 }
 ```
-[**You can experiment with a working example here.**](https://jsfiddle.net/2jh94oru/3/)
+[**You can experiment with a working example here.**](https://jsfiddle.net/8t0wnpvL/)
 
 #### Q: How do I have the bot only appear during certain hours?
-**A:** If the bot should only appear during certain times, you will need to wrap you Ada scripts in a condition to check if the user is within scheduled operation hours. If you only require that certain messages be within a scheduled time window, we recommend that you make use of Scheduled Blocks in the **Answer** page of your Ada dashboard.
+**A:** If the bot should only appear during certain times, you will need to wrap your Ada scripts in a condition to check if the user is within scheduled operation hours. If you only require that certain messages be within a scheduled time window, we recommend that you make use of Scheduled Blocks in the **Answer** page of your Ada dashboard.
 
 #### Q: How do I customize the look and feel of Ada Chat?
-**A:** Basic customization, such as client tint colour, can be modified from the **Settings > General** page of your Ada dashboard. If you require additional customization, you can make use of the [customStyles](#customstyles-type-string) Chaperone option above.
+**A:** Basic customization, such as client tint colour, can be modified from the **Settings > General** page of your Ada dashboard. If you require additional customization, you can make use of the [customStyles](#customstyles-type-string) Embed option above.
 
 ## Versioning
-Currently, the embed script for Ada Chaperone is versioned. This means that in order to receive new Chaperone updates you will need to upgrade to the latest version. The latest embed script can always be found within this document, or within the Chat modal of the **Settings > Platforms** page in your Ada dashboard.
-
-In the (near) future we intend to release a versionless Chaperone embed script. Stay tuned!
+The Embed script found above is *versionless*. This means that the latest stable features will be made available to you without any changes to your code. Should you wish to test upcoming features before they are released to production, you may make use of `https://static.ada.support/embed.beta.js`. Finally, in rare situations you may wish to lock Embed to a specific version. You can find a list of available Embed releases [here](). Of course, using a static verion means that new changes and improvements will not be available to you. Additionally, though we will make every effort to remain backward compatible, we at some point may require you to update your version. In such cases you will be notified by email *insert amount of time here* before we deprecate your version.
 
 ## Questions
 Need some help? Get in touch with us at [help@ada.support](mailto:help@ada.support).
