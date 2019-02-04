@@ -1,4 +1,4 @@
-# Ada Embed ✨New✨
+# Ada Embed (✨New✨)
 
 > Ada Embed is a small JavaScript application that embeds your **Ada** Chat bot into your web page.
 
@@ -8,8 +8,7 @@
 1. [Prerequisites](#prerequisites)
 2. [Quick Start](#quick-start)
     - [Turn on your bot](#1-turn-on-your-bot)
-    - [Embed Chaperone script](#2-embed-chaperone-script)
-    - [Instantiate Chaperone](#3-instantiate-chaperone)
+    - [Embed script](#2-embed-script)
 3. [Configuring Your Bot](#configuring-your-bot)
     - [Options](#options)
     - [Methods](#methods)
@@ -20,7 +19,7 @@
 ## Prerequisites
 This document is intended for bot specialists and developers with working knowledge of HTML. For some of the advanced setup, basic knowledge of JavaScript is required. The document also assumes you have a hosted web page that you have write access to.
 
-## Getting Started
+## Quick Start
 Getting started with Ada is easy, just follow the steps below.
 
 ### 1. Turn on your bot
@@ -28,7 +27,7 @@ The first step towards adding your Ada Chat Bot to your web page is to turn on t
 
 <img width="600" alt="Ada Dashboard Chat Settings" src="https://user-images.githubusercontent.com/9045634/49764964-f2013d80-fc9e-11e8-8e8e-52ed7774b3bf.png">
 
-### 2. Quick Start
+### 2. Embed script
 Once you have your website all ready-to-go, find the page where you'd like to embed the Ada Chat bot. This will be a `.html` file (or equivalent). Here you will need to paste the following into the `<head>...</head>` block. Be sure to replace the example data-handle with your own.
 
 ```html
