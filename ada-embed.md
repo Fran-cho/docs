@@ -145,6 +145,22 @@ Takes in a language code to programatically set the bot language. Languages must
 </script>
 ```
 
+#### `metaFields` `@type {Object}`
+Used to pass meta information about a Chatter. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the `phone_number` and `name` for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the **Conversations** page of your Ada dashboard. Should you need to programtically change these values after bot setup, you can make use of the [setMetaFields](#setmetafieldsmetafields-param-object) action below.
+
+**Example:**
+```html
+<script type="text/javascript">
+  window.adaSettings = {
+    metaFields: {
+      phone_number: "(123) 456-7890",
+      name: "Ada Lovelace"
+    }
+    ... // The rest of your settings here
+  }
+</script>
+```
+
 #### `mobileOverlay` `@type {Boolean}`
 By default, the Web Chat will open in a new window on mobile devices. If you'd prefer to have it open as an overlay overtop the current window, set this option to `true`.
 
