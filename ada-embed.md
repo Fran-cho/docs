@@ -194,7 +194,7 @@ adaEmbed.reset();
 ```
 
 #### `setMetaFields(metaFields)` `@param {Object}`
-You can use this method to set meta properties for the Chatter. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the `email` and `name` for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the **Conversations** page of your Ada dashboard. Additionally, the bot can be configured to call the user by name. You can learn more about personalization [here](https://ada.support/articles/personalization/).
+You can use this method to set meta properties for the Chatter. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the `phone_number` and `name` for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the **Conversations** page of your Ada dashboard. Additionally, the bot can be configured to call the user by name. You can learn more about personalization [here](https://ada.support/articles/personalization/).
 
 **Example:**
 ```javascript
@@ -220,11 +220,11 @@ Removes Ada Embed from your page.
 
 **Example:**
 ```javascript
-adaEmbed.start();
+adaEmbed.stop();
 ```
 
 #### `toggle()`
-Can be used to programatically close the Chat window. This method cannot be used with the `parentElement` option.
+Can be used to programatically open / close the Chat window. This method cannot be used with the `parentElement` option.
 
 **Example:**
 ```javascript
@@ -233,7 +233,7 @@ adaEmbed.toggle();
 
 ## FAQ
 #### Q: How do I set up Ada Chat in mobile?
-**A:** Ada Embed is currently only available as a Web App. For developers looking to integrate Ada into a mobile App, we recommend you include the URL of your Ada Chat bot directly [inside a Webview](https://github.com/AdaSupport/docs/blob/nh-chaperone-rewrite/embed-mobile.md). By not using Ada Embed you will lose access to the actions and settings interface detailed above. Fortunately, we have made many of these features available to you via query parameters in your Chat URL.
+**A:** Ada Embed is currently only available as a Web App. For developers looking to integrate Ada into a mobile application, we recommend you include the URL of your Ada Chat bot directly [inside a Webview](https://github.com/AdaSupport/docs/blob/nh-chaperone-rewrite/embed-mobile.md). By not using Ada Embed you will lose access to the actions and settings interface detailed above. Fortunately, we have made many of these features available to you via query parameters in your Chat URL.
 
 See the table below for a list of available parameters.
 
