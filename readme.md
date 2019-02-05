@@ -10,6 +10,10 @@ This is where to look if you're integrating with any of Ada's backend services.
 
 Check this out if you're interested in embedding Ada's chat interface into your website.
 
+## [Embed (✨New✨)](/ada-embed.md)
+
+The latest Ada Embed script.
+
 ## [Embed in Mobile Application](/embed-mobile.md)
 
 Read these instructions if you want to embed Ada's chat interface into your native mobile application (instructions for both iOS and Android here).
