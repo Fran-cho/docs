@@ -10,7 +10,7 @@ This is where to look if you're integrating with any of Ada's backend services.
 
 Check this out if you're interested in embedding Ada's chat interface into your website.
 
-## [Embed (✨New✨)](/ada-embed.md)
+## [Embed ✨Beta✨](/ada-embed.md)
 
 The latest Ada Embed script.
 
