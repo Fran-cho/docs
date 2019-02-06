@@ -210,7 +210,7 @@ adaEmbed.reset();
 ```
 
 #### `setMetaFields(metaFields)` `@param {Object}`
-You can use this method to set meta properties for the Chatter. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the `phone_number` and `name` for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the **Conversations** page of your Ada dashboard. Additionally, the bot can be configured to call the user by name. You can learn more about personalization [here](https://ada.support/articles/personalization/).
+Used to update `metaFields` after Chat has been opened. In most situations, the [metaFields](#metafields-type-object) settings object should be enough for user attribution. However, in cases where Ada Chat remains open while page changes occur (like in Single Page Applications), this methods may be useful.
 
 **Example:**
 ```javascript
@@ -290,7 +290,9 @@ button.ada-chat-button {
 **A:** The [Embed script](#2-embed-script) features a useful data attribute called `data-lazy`. When defined on your script, Ada Embed will not be triggered until you manually call [adaEmbed.start()](#startadasettings-param-object).
 
 ## Versioning
-The Embed script found above is *versionless*. This means that the latest stable features will be made available to you without any changes to your code. Should you wish to test upcoming features before they are released to production, you may make use of `https://static.ada.support/embed.beta.js`. Finally, in rare situations you may wish to lock Embed to a specific version. You can find a list of available Embed releases [here](https://github.com/AdaSupport/embed/releases). Of course, using a static verion means that new changes and improvements will not be available to you. Additionally, though we will make every effort to remain backward compatible, we at some point may require you to update your version. In such cases you will be notified by email *insert amount of time here* before we deprecate your version.
+The Embed script found above is *versionless*. This means that the latest stable features will be made available to you without any changes to your code. Should you wish to test upcoming features before they are released to production, you may make use of `https://static.ada.support/embed.beta.js`. 
+
+In rare situations you may wish to lock Embed to a specific version. You can find a list of available Embed releases [here](https://github.com/AdaSupport/embed/releases). Of course, using a static verion means that new changes and improvements will not be available to you. Additionally, though we will make every effort to remain backward compatible, we at some point may require you to update your version. In such cases you will be notified by email *insert amount of time here* before we deprecate your version.
 
 ## Questions
 Need some help? Get in touch with us at [help@ada.support](mailto:help@ada.support).
