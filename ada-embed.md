@@ -132,6 +132,19 @@ This can be used to customize the greeting messages that new users see. This is 
 </script>
 ```
 
+#### `hideMask` `@type {Boolean}`
+When set to `true`, this will prevent the default mask from appearing over top of your site's content when opened on desktop.
+
+**Example:**
+```html
+<script type="text/javascript">
+  window.adaSettings = {
+    hideMask: true,
+    ... // The rest of your settings here
+  }
+</script>
+```
+
 #### `language` `@type {String}`
 Takes in a language code to programatically set the bot language. Languages must first be turned on in the **Settings > Multilingual** page of your Ada dashboard. Language codes follow the [ISO 639-1 language format](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
