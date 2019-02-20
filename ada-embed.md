@@ -119,14 +119,14 @@ Selector | Description
 </script>
 ```
 
-#### `greetingHandle` `@type {String}`
-This can be used to customize the greeting messages that new users see. This is useful for setting page-specific greetings across your app. The `greetingHandle` should correspond to the title of the Answer you would like to use.
+#### `greeting` `@type {String}`
+This can be used to customize the greeting messages that new users see. This is useful for setting page-specific greetings across your app. The `greeting` should correspond to the ID of the Answer you would like to use. The ID can be found in the URL of the corresponding Answer in the dashboard.
 
 **Example:**
 ```html
 <script type="text/javascript">
   window.adaSettings = {
-    greetingHandle: "My Answer",
+    greeting: "5c59aaabd8269e0339979014",
     ... // The rest of your settings here
   }
 </script>
@@ -159,7 +159,7 @@ Takes in a language code to programatically set the bot language. Languages must
 ```
 
 #### `metaFields` `@type {Object}`
-Used to pass meta information about a Chatter. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the `phone_number` and `name` for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the **Conversations** page of your Ada dashboard. Should you need to programtically change these values after bot setup, you can make use of the [setMetaFields](#setmetafieldsmetafields-param-object) action below.
+Used to pass meta information about a Chatter. This can be useful for tracking information about your end users, as well as for personalizing their experience. For example, you may wish to track the `phone_number` and `name` for conversation attribution. Once set, this information can be accessed in the email attachment from Handoff Form submissions, or via the Chatter modal in the **Conversations** page of your Ada dashboard. Should you need to programatically change these values after bot setup, you can make use of the [setMetaFields](#setmetafieldsmetafields-param-object) action below.
 
 **Example:**
 ```html
