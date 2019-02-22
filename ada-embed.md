@@ -175,7 +175,13 @@ Used to pass meta information about a Chatter. This can be useful for tracking i
 ```
 
 #### `mobileOverlay` `@type {Boolean}`
-By default, the Web Chat will open in a new window on mobile devices. If you'd prefer to have it open as an overlay overtop the current window, set this option to `true`.
+By default, the Web Chat will open as an overlay over your site on mobile devices. If you'd prefer to have it open in a new window, set this option to `false`. Note that setting to `false` will prevent the following features from working:
+- [adaReadyCallback](#adareadycallback-type-function)
+- [chatterTokenCallback](#chattertokencallback-type-function)
+- [styles](#styles-type-string)
+- [deleteHistory](#deleteHistory)
+- [reset](#reset)
+- [setMetaFields](#setmetafieldsmetafields-param-object)
 
 #### `parentElement` `@type {String|Object}`
 Specifies where to mount the `<iframe>` if the default side drawer is not desired. Accepts the `HTMLNode` or `id` of the desired parent element.
